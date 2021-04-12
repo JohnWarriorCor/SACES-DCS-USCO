@@ -1,630 +1,210 @@
 <div class="wrapper">
-  <div
-    id="carouselExampleFade"
-    class="carousel slide carousel-fade"
-    data-ride="carousel"
-  >
-    <div class="carousel-inner text-center">
-      <div
-        [ngClass]="i == 0 ? 'carousel-item active' : 'carousel-item'"
-        *ngFor="let item of carrusel | keysfirebase | listinvert; let i = index"
-      >
-        <a [href]="carrusel[item].urlInfo" target="_blank"
-          ><img
-            class="d-block w-100 cursorSelect"
-            [src]="carrusel[item].urlImg"
-            [alt]="carrusel[item].titulo"
-            [title]="carrusel[item].titulo"
-        /></a>
-        <div class="container">
-          <button
-            *ngIf="auth.user | async"
-            class="btn btnColorFacultadSalud m-2 btn-lg btn-block carousel-caption"
-            [routerLink]="['/admi_carrusel']"
-          >
-            <i class="fas fa-pencil-alt"></i> Editar
-          </button>
-        </div>
-      </div>
-    </div>
-    <a
-      class="carousel-control-prev"
-      href="#carouselExampleFade"
-      role="button"
-      data-slide="prev"
-    >
-      <i class="fas fa-chevron-circle-left fa-3x"></i>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselExampleFade"
-      role="button"
-      data-slide="next"
-    >
-      <i class="fas fa-chevron-circle-right fa-3x"></i>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
   <br />
   <div class="container fadeIn fast" style="margin-top: 30px">
     <div class="row">
-      <div class="col fondodivleft shadow">
-        <div class="row">
-          <div class="col">
-            <h3 class="titleInstRed">
-              <i class="fas fa-book-open"></i> Denominación del programa
-            </h3>
-            <hr class="lineInstRed" />
-            <br />
-            <ngb-tabset
-              [justify]="currentJustify"
-              class="tabset1"
-              *ngFor="let den of denominacion | keysfirebase"
-            >
-              <ngb-tab>
-                <ng-template ngbTabTitle
-                  ><i class="fas fa-list-ul"></i> Programa</ng-template
-                >
-                <ng-template ngbTabContent>
-                  <div class="justify-content-center m-sm-3">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <td><span class="redinst">Título a otorgar</span></td>
-                          <td style="width: 60%">
-                            <span class="grayinst">
-                              {{ denominacion[den].tituloOtorgar }}</span
-                            >
-                          </td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <span class="redinst">Registro Calificado:</span>
-                          </td>
-                          <td>
-                            <a
-                              class="grayinst"
-                              target="_blank"
-                              [href]="denominacion[den].registroCalificadoUrl"
-                            >
-                              {{ denominacion[den].registroCalificado }}</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <span class="redinst"
-                              >Periodicidad de admisión:</span
-                            >
-                          </td>
-                          <td>
-                            <span class="grayinst">
-                              {{ denominacion[den].perAdmision }}</span
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <span class="redinst">Número de créditos:</span>
-                          </td>
-                          <td>
-                            <span class="grayinst">
-                              {{ denominacion[den].numCreditos }}</span
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><span class="redinst">Duración:</span></td>
-                          <td>
-                            <span class="grayinst">
-                              {{ denominacion[den].duracion }}</span
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <span class="redinst">Costo de matrícula:</span>
-                          </td>
-                          <td>
-                            <span class="grayinst">
-                              {{ denominacion[den].costoMatricula }}</span
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <span class="redinst">Cupo:</span>
-                          </td>
-                          <td>
-                            <span class="grayinst">
-                              {{ denominacion[den].cupo }}</span
-                            >
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </ng-template>
-              </ngb-tab>
-              <ngb-tab>
-                <ng-template ngbTabTitle
-                  ><i class="fas fa-flag"></i> Misión</ng-template
-                >
-                <ng-template ngbTabContent>
-                  <p style="padding: 20px" class="text-justify grayinst">
-                    {{ denominacion[den].mision }}
-                  </p>
-                </ng-template>
-              </ngb-tab>
-              <ngb-tab>
-                <ng-template ngbTabTitle
-                  ><i class="far fa-eye"></i> Visión</ng-template
-                >
-                <ng-template ngbTabContent>
-                  <p style="padding: 20px" class="text-justify grayinst">
-                    {{ denominacion[den].vision }}
-                  </p>
-                </ng-template>
-              </ngb-tab>
-            </ngb-tabset>
-            <ngb-tabset [justify]="currentJustify" class="tabset1">
-              <ngb-tab>
-                <ng-template ngbTabTitle
-                  ><i class="fas fa-user-md"></i> Propósito</ng-template
-                >
-                <ng-template
-                  ngbTabContent
-                  *ngFor="let den of denominacion | keysfirebase"
-                >
-                  <p style="padding: 20px" class="text-justify grayinst">
-                    {{ denominacion[den].proposito }}
-                  </p>
-                  <button
-                    *ngIf="auth.user | async"
-                    class="btn navlinkinSolid m-2 btn-lg btn-block"
-                    [routerLink]="['/admi_denominacion', den]"
-                  >
-                    <i class="fas fa-pencil-alt"></i> Editar
-                  </button>
-                </ng-template>
-              </ngb-tab>
-            </ngb-tabset>
-          </div>
-        </div>
-      </div>
-      <div class="col fondodivright shadow">
-        <h3 [routerLink]="['/agendaPrograma']" class="titleInstRed cursorSelect">
-          <i class="far fa-edit"></i> Agéndate
-        </h3>
-        <hr class="lineInstRed" />
-        <br />
-        <div class="row">
-          <div class="col">
-            <p class="grayinst font-weight-bold cursorSelect" [routerLink]="['/agendaPrograma']"><small><i class="fas fa-newspaper"></i> Actividades de Programa</small></p>
-            <div
-              id="carouselExampleControlsPrograma"
-              class="carousel slide"
-              data-ride="carousel"
-              style="width: 100%"
-            >
-              <div class="carousel-inner">
-                <div
-                  [ngClass]="i == 0 ? 'carousel-item active' : 'carousel-item'"
-                  *ngFor="let evento of sortDataEventoPrograma; let i = index"
-                >
-                  <div class="card-deck">
-                    <div class="card shadow">
-                      <img
-                        [src]="evento.img"
-                        class="card-img-top cursorSelect"
-                        [routerLink]="['/eventoPrograma', evento.key]"
-                        [alt]="evento.titulo"
-                        [title]="evento.titulo"
-                      />
-                      <div class="card-body">
-                        <h4
-                          [routerLink]="['/eventoPrograma', evento.key]"
-                          class="subTituloRojoInstitucional cursorSelect"
-                        >
-                          {{ evento.titulo }}
-                        </h4>
-                        <h6 class="card-title subTituloRojoInstitucional">
-                          <i class="far fa-calendar-alt"></i>
-                          {{
-                            evento.fechaEvento | date: "fullDate" | titlecase
-                          }}
-                        </h6>
-                        <p class="card-text grayinst">
-                          {{ evento.resenia }}
-                        </p>
-                        <a
-                          [href]="evento.url"
-                          target="_blank"
-                          class="btn navlinkinSolid"
-                          >Más información</a
-                        >
-                        <p class="card-text text-right">
-                          <small class="text-muted"
-                            >Publicado:
-                            {{
-                              evento.fechaPublicacion
-                                | date: "fullDate"
-                                | titlecase
-                            }}</small
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleControlsPrograma"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleControlsPrograma"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-          <div class="col">
-            <p class="grayinst font-weight-bold cursorSelect" [routerLink]="['/agendaInstitucional']"><small><i class="fas fa-rss-square"></i> Actividades Institucionales</small></p>
-            <div
-              id="carouselExampleControlsInstitucional"
-              class="carousel slide"
-              data-ride="carousel"
-              style="width: 100%"
-            >
-              <div class="carousel-inner">
-                <div
-                  [ngClass]="i == 0 ? 'carousel-item active' : 'carousel-item'"
-                  *ngFor="let evento of sortDataEventoInstitucional; let i = index"
-                >
-                  <div class="card-deck">
-                    <div class="card shadow">
-                      <img
-                        [src]="evento.img"
-                        class="card-img-top cursorSelect"
-                        [routerLink]="['/eventoInstitucional', evento.key]"
-                        [alt]="evento.titulo"
-                        [title]="evento.titulo"
-                      />
-                      <div class="card-body">
-                        <h4
-                          [routerLink]="['/eventoInstitucional', evento.key]"
-                          class="subTituloRojoInstitucional cursorSelect"
-                        >
-                          {{ evento.titulo }}
-                        </h4>
-                        <h6 class="card-title subTituloRojoInstitucional">
-                          <i class="far fa-calendar-alt"></i>
-                          {{
-                            evento.fechaEvento | date: "fullDate" | titlecase
-                          }}
-                        </h6>
-                        <p class="card-text grayinst">
-                          {{ evento.resenia }}
-                        </p>
-                        <a
-                          [href]="evento.url"
-                          target="_blank"
-                          class="btn navlinkinSolid"
-                          >Más información</a
-                        >
-                        <p class="card-text text-right">
-                          <small class="text-muted"
-                            >Publicado:
-                            {{
-                              evento.fechaPublicacion
-                                | date: "fullDate"
-                                | titlecase
-                            }}</small
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleControlsInstitucional"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleControlsInstitucional"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div class="row">
       <div class="col-sm-8 fondodivleft shadow">
         <h3 class="titleInstRed">
-          <i class="fas fa-user-edit"></i> Artículos y Publicaciones
+          <i class="fas fa-user-edit"></i> Lineamientos para el Registro
+          Calificado
         </h3>
         <hr class="lineInstRed" />
-        <br /><br />
-        <h4 [routerLink]="['/articulosProfesores']" class="cursorSelect">
-          Profesores
-        </h4>
-        <div class="table-responsive">
-          <table
-            id="tableSortExample"
-            class="table table-bordered table-hover parinst text-center"
-            style="border-radius: 10px"
+        <div class="container text-center">
+          <br />
+          <hr />
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
           >
-            <thead class="tablatit">
-              <tr class="white">
-                <th style="vertical-align: middle" scope="col">N°</th>
-                <th style="vertical-align: middle" scope="col">Publicación</th>
-                <th style="vertical-align: middle" scope="col">Autores</th>
-                <th style="vertical-align: middle" scope="col">Revista</th>
-                <th style="vertical-align: middle" scope="col">Enlace</th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let item of articulosPro | keysfirebase">
-              <tr
-                *ngFor="
-                  let field of articulosPro[item].fieldArray | keysfirebase;
-                  let i = index
-                "
-              >
-                <th style="vertical-align: middle" scope="row">
-                  {{ i + 1 }}
-                </th>
-                <td style="vertical-align: middle">
-                  {{ articulosPro[item].fieldArray[field].publicacion }}
-                </td>
-                <td style="vertical-align: middle">
-                  {{ articulosPro[item].fieldArray[field].autores }}
-                </td>
-                <td style="vertical-align: middle">
-                  {{ articulosPro[item].fieldArray[field].revista }}
-                </td>
-                <td style="vertical-align: middle">
-                  <a
-                    [href]="articulosPro[item].fieldArray[field].enlace"
-                    target="_blank"
-                    placement="right"
-                    ngbTooltip="Ir al documento"
-                    class="colorRedInst"
-                    ><i class="fas fa-file-signature fa-2x"></i
-                  ></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <br />
-        <h4 [routerLink]="['/articulosEstudiantes']" class="cursorSelect">
-          Estudiantes
-        </h4>
-        <div class="table-responsive">
-          <table
-            id="tableSortExample"
-            class="table table-bordered table-hover parinst text-center"
-            style="border-radius: 10px"
-          >
-            <thead class="tablatit">
-              <tr class="white">
-                <th style="vertical-align: middle" scope="col">N°</th>
-                <th style="vertical-align: middle" scope="col">Publicación</th>
-                <th style="vertical-align: middle" scope="col">Autores</th>
-                <th style="vertical-align: middle" scope="col">Revista</th>
-                <th style="vertical-align: middle" scope="col">Enlace</th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let item of articuloEstudiante | keysfirebase">
-              <tr
-                *ngFor="
-                  let field of articuloEstudiante[item].fieldArray
-                    | keysfirebase;
-                  let i = index
-                "
-              >
-                <th style="vertical-align: middle" scope="row">
-                  {{ i + 1 }}
-                </th>
-                <td style="vertical-align: middle">
-                  {{ articuloEstudiante[item].fieldArray[field].publicacion }}
-                </td>
-                <td style="vertical-align: middle">
-                  {{ articuloEstudiante[item].fieldArray[field].autores }}
-                </td>
-                <td style="vertical-align: middle">
-                  {{ articuloEstudiante[item].fieldArray[field].revista }}
-                </td>
-                <td style="vertical-align: middle">
-                  <a
-                    [href]="articuloEstudiante[item].fieldArray[field].enlace"
-                    target="_blank"
-                    placement="right"
-                    ngbTooltip="Ir al documento"
-                    class="colorRedInst"
-                    ><i class="fas fa-file-signature fa-2x"></i
-                  ></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <br />
-        <hr />
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="col">
-                <h3
-                  [routerLink]="['/docentes']"
-                  class="titleInstRed cursorSelect"
-                >
-                  <i class="fas fa-users"></i> Plantel Docente
-                </h3>
-                <br />
-              </div>
-              <div class="col text-rigth">
-                <ngb-pagination
-                  class="d-flex justify-content-end"
-                  [collectionSize]="(plantelProfesores | keysfirebase).length"
-                  [pageSize]="pageSizeProfesores"
-                  [(page)]="pageProfesores"
-                ></ngb-pagination>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div
-                  id="carouselExampleInterval"
-                  class="carousel slide"
-                  data-ride="carousel"
-                >
-                  <div class="carousel-inner text-center no-print">
-                    <div class="carousel-item active">
-                      <div class="card-deck">
-                        <div
-                          class="card"
-                          *ngFor="
-                            let item of plantelProfesores
-                              | keysfirebase
-                              | slice
-                                : (pageProfesores - 1) * pageSizeProfesores
-                                : (pageProfesores - 1) * pageSizeProfesores +
-                                    pageSizeProfesores;
-                            let i = index
-                          "
-                          style="border: none"
-                        >
-                          <img
-                            [routerLink]="['/docente', item]"
-                            (click)="up()"
-                            [src]="plantelProfesores[item].foto"
-                            [alt]="plantelProfesores[item].nombre"
-                            [title]="plantelProfesores[item].nombre"
-                            class="card-img-top rounded greyImg cursorSelect"
-                          />
-                          <h5
-                            class="card-title m-2"
-                            placement="top"
-                            ngbTooltip="Click para ir al perfil"
-                          >
-                            {{ plantelProfesores[item].nombre }}
-                          </h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <span
+              [routerLink]="['/DenominacionDelPrograma', 'nuevo']"
+              class="badge badge-primary badge-pill indice"
+              >1</span
+            >
+            <h3
+              (mouseover)="hover1 = true"
+              (mouseout)="hover1 = false"
+              [ngClass]="{ claro2: hover1 }"
+              [routerLink]="['/DenominacionDelPrograma', 'nuevo']"
+              class="factores"
+            >
+              Denominación del programa
+            </h3>
           </div>
-        </div>
-        <br />
-        <hr />
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="col">
-                <h3
-                  [routerLink]="['/estudiantes']"
-                  class="titleInstRed cursorSelect"
-                >
-                  <i class="fas fa-users"></i> Nuestros Estudiantes
-                </h3>
-                <br />
-              </div>
-              <div class="col text-rigth">
-                <ngb-pagination
-                  class="d-flex justify-content-end"
-                  [collectionSize]="(listados | keysfirebase).length"
-                  [pageSize]="pageSizeEstudiantes"
-                  [(page)]="pageEstudiantes"
-                ></ngb-pagination>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div
-                  id="carouselExampleInterval"
-                  class="carousel slide"
-                  data-ride="carousel"
-                >
-                  <div class="carousel-inner text-center no-print">
-                    <div class="carousel-item active">
-                      <div class="card-deck">
-                        <div
-                          class="card"
-                          *ngFor="
-                            let item of listados
-                              | keysfirebase
-                              | slice
-                                : (pageEstudiantes - 1) * pageSizeEstudiantes
-                                : (pageEstudiantes - 1) * pageSizeEstudiantes +
-                                    pageSizeEstudiantes;
-                            let i = index
-                          "
-                          style="border: none"
-                        >
-                          <img
-                            [routerLink]="['/estudiante', item]"
-                            (click)="up()"
-                            [src]="listados[item].foto"
-                            [alt]="listados[item].nombre"
-                            [title]="listados[item].nombre"
-                            class="card-img-top rounded greyImg cursorSelect"
-                            placement="top"
-                            ngbTooltip="Click para ir al perfil"
-                          />
-                          <h5 class="card-title m-2">
-                            {{ listados[item].nombre }}
-                          </h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/JustificacionDelPrograma']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >2</span
+            >
+            <h3
+              [routerLink]="['/JustificacionDelPrograma', 'nuevo']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover2 = true"
+              (mouseout)="hover2 = false"
+              [ngClass]="{ claro2: hover2 }"
+              class="factores"
+            >
+              Justificación del programa
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/AspectosCurriculares']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >3</span
+            >
+            <h3
+              [routerLink]="['/AspectosCurriculares']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover3 = true"
+              (mouseout)="hover3 = false"
+              [ngClass]="{ claro2: hover3 }"
+              class="factores"
+            >
+              Aspectos curriculares
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/AcademicasProcesosFormativos']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >4</span
+            >
+            <h3
+              [routerLink]="['/AcademicasProcesosFormativos']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover4 = true"
+              (mouseout)="hover4 = false"
+              [ngClass]="{ claro2: hover4 }"
+              class="factores"
+            >
+              Organización actividades académicas y proceso formativo
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/InvestigacionInnovacion']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >5</span
+            >
+            <h3
+              [routerLink]="['/InvestigacionInnovacion']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover5 = true"
+              (mouseout)="hover5 = false"
+              [ngClass]="{ claro2: hover5 }"
+              class="factores"
+            >
+              Investigación, innovación y/o creación artística y cultural
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/SectorExerno']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >6</span
+            >
+            <h3
+              [routerLink]="['/SectorExerno']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover6 = true"
+              (mouseout)="hover6 = false"
+              [ngClass]="{ claro2: hover6 }"
+              class="factores"
+            >
+              Relación con el sector externo
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/Profesor']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >7</span
+            >
+            <h3
+              [routerLink]="['/Profesor']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover7 = true"
+              (mouseout)="hover7 = false"
+              [ngClass]="{ claro2: hover7 }"
+              class="factores"
+            >
+              Profesores
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/MediosEducativos']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >8</span
+            >
+            <h3
+              [routerLink]="['/MediosEducativos']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover8 = true"
+              (mouseout)="hover8 = false"
+              [ngClass]="{ claro2: hover8 }"
+              class="factores"
+            >
+              Medios educativos
+            </h3>
+          </div>
+          <div
+            class="row align-items-center text-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <span
+              [routerLink]="['/InfraestructuraFisicaTecnologica']"
+              routerLinkActive="router-link-active"
+              class="badge badge-primary badge-pill"
+              style="margin: 5px; font-size: 30px; background-color: #8f141b"
+              >9</span
+            >
+            <h3
+              [routerLink]="['/InfraestructuraFisicaTecnologica']"
+              routerLinkActive="router-link-active"
+              (mouseover)="hover9 = true"
+              (mouseout)="hover9 = false"
+              [ngClass]="{ claro2: hover9 }"
+              class="factores"
+            >
+              Infraestructura física y tecnológica
+            </h3>
           </div>
         </div>
         <hr />
@@ -646,41 +226,9 @@
             allowTransparency="true"
             allow="encrypted-media"
           ></iframe>
-          <hr />
-          <h3 class="titleInstRed">
-            <i class="far fa-calendar-alt"></i> Calendario
-          </h3>
-          <hr class="lineInstRed" />
-          <br />
-          <iframe
-            src="https://calendar.google.com/calendar/embed?src=docencienciasdelasaludusco%40gmail.com&ctz=America%2FBogota"
-            style="border: 0"
-            width="300"
-            height="400"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-          <br />
-          <hr />
-          <h3 class="titleInstRed">
-            <i class="fab fa-youtube"></i> Canal YouTube
-          </h3>
-          <hr class="lineInstRed" />
-          <br />
-          <iframe
-            id="ytplayer"
-            type="text/html"
-            width="300"
-            height="360"
-            src="https://www.youtube.com/embed/xn5AXaLtO0Y?autoplay=0&origin=http://example.com"
-            frameborder="0"
-          ></iframe>
-          <hr />
         </div>
       </div>
     </div>
-    <br />
-    <hr />
     <br />
   </div>
   <br />

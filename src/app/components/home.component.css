@@ -185,4 +185,257 @@ ngb-pagination ::ng-deep ul > li.active > a {
 #gradiante {
   background-image: linear-gradient(#8f141b 20%, white 10%);
 }
+.activeTab {
+  color: #8f141b;
+  border-bottom: 5px solid #8f141b;
+  border-radius: 5px;
+}
 
+a.activeTab:hover {
+  color: #cab691;
+}
+.colorRojo {
+  background-color: #8f141b;
+}
+.colorCafe {
+  background-color: #dfd4a6;
+}
+.colorNegro {
+  color: black;
+}
+.colorRojoContorno {
+  color: #8f141b;
+}
+.iconRadio {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 5px black;
+  padding: 0.5em 0.6em;
+}
+.divUpload {
+  position: relative;
+  overflow: hidden;
+}
+.inputUpload {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+.menuAdmin {
+  background-color: white;
+  padding: 10px;
+  font-style: italic;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+  color: #8fc8ee;
+}
+.selectAdmin {
+  font-size: 12px;
+  width: 15%;
+  margin-bottom: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+.main-container {
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.w120 {
+  width: 120px;
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+.caki {
+  color: #dfd4a6;
+}
+.text-usco-red {
+  color: #8f141b;
+}
+.factores {
+  font-size: 20px;
+  height: 50px;
+  width: 600px;
+  border-radius: 15px 0px 15px 0px;
+  background-color: #8f141b;
+  padding: 10px;
+  color: #dfd4a6;
+}
+
+.claro2 {
+  background-color: rgb(167, 25, 32);
+  color: rgb(236, 224, 176);
+}
+.indice {
+  margin: 5px;
+  font-size: 30px;
+  background-color: #8f141b;
+}
+.navcon {
+  background-color: #dfd4a6;
+  color: #8f141b;
+  border-bottom-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.navlinkin {
+  background-color: #8f141b;
+  color: #dfd4a6;
+}
+.navlinkinSolid {
+  background-color: #8f141b;
+  color: #dfd4a6;
+}
+.navlinkout {
+  background-color: #dfd4a6;
+  color: #8f141b;
+}
+.navlinkin:hover {
+  background-color: rgb(179, 27, 34);
+  color: rgb(255, 242, 191);
+}
+.navlinkout:hover {
+  color: #dfd4a6;
+  background-color: #8f141b;
+}
+.fondoTitulo {
+  background-color: rgb(72, 153, 228);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.inputPaciente {
+  border-radius: 50px;
+  width: 20%px;
+  margin-bottom: 15px;
+}
+.gray {
+  color: #626567;
+}
+.botonUsco {
+  background-color: #8f141b;
+  color: #dfd4a6;
+  width: 50%;
+  font-size: 2vw;
+}
+.botonUsco:hover {
+  background-color: rgb(179, 27, 34);
+  color: rgb(255, 242, 191);
+}
+.botonUscoPerfil {
+  background-color: #8f141b;
+  color: #dfd4a6;
+  width: 20%;
+  font-size: 12px;
+  margin: 5px;
+}
+.botonUscoPerfil:hover {
+  background-color: rgb(179, 27, 34);
+  color: rgb(255, 242, 191);
+}
+@media (min-width: 768px) {
+  .hugeModal > .modal-dialog {
+    width: 90%;
+    max-width: 1200px; /* or 90% or whatever */
+  }
+}
+.tableBordered td,
+.tableBordered th {
+  border: 1px solid #000;
+  border-top: 1px solid #000;
+  padding: 8px;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #000;
+}
+.ir-arriba {
+  display: inline-block;
+  padding: 10px;
+  background-color: #8f141b;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  float: none;
+  z-index: 100;
+}
+.pre {
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* Modern browsers */
+}
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  margin: 0;
+  opacity: 0;
+}
+.custom-file-label::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  height: calc(1.5em + .75rem);
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  color: #dfd4a6;
+  content: "Adjuntar";
+  background-color: #8f141b;
+  border-left: inherit;
+  border-radius: 0 .25rem .25rem 0;
+}
+.my-custom-class .tooltip-inner {
+  background-color: #8f141b;
+  color: white;
+  font-size: 125%;
+}
+.my-custom-class .arrow::before {
+  border-top-color: #8f141b;
+}

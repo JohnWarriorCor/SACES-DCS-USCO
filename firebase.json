@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/DocCienciasSalud",
+    "public": "dist/SACESDCSUSCO",
     "ignore": [
       "firebase.json",
       "**/.*",

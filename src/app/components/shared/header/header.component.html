@@ -44,38 +44,21 @@
 </div>
 <div id="sp-logo-wrap">
   <div class="container">
-    <div class="row mt-3">
-      <div
-        class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
-        style="display: flex; justify-content: center"
-      >
-        <a
-          title="Universidad Surcolombiana Facultad de Salud"
-          [routerLink]="['/inicio']"
+    <div class="row align-items-center">
+      <div class="col text-center">
+        <a title="Universidad Surcolombiana" [routerLink]="['/home']">
+          <img
+            src="assets/universidad-surcolombiana-50.png"
+            alt="Universidad Surcolombiana"
+          />
+        </a>
+      </div>
+      <div class="col text-center align-items-center">
+        <h5
+          class="caki text-uppercase font-weight-bold"
         >
-          <img
-            style="width: 95%"
-            src="assets/header-facultad-salud-universidad-surcolombiana.png"
-            alt="Universidad Surcolombiana Facultad de Salud"
-          />
-        </a>
-      </div>
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center">
-        <a title="Universidad Surcolombiana Facultad de Salud">
-          <img
-            class="responsive"
-            src="assets/header-nombre-doctorado.png"
-            alt="Universidad Surcolombiana Facultad de Salud"
-          />
-        </a>
-      </div>
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center">
-        <a title="Universidad Surcolombiana Facultad de Salud">
-          <img
-            src="assets/header-escudo-colombia.png"
-            alt="Universidad Surcolombiana Facultad de Salud"
-          />
-        </a>
+          SACES
+        </h5>
       </div>
     </div>
   </div>
@@ -112,7 +95,7 @@
               routerLinkActive="router-link-active"
               class="nav-link dropdown-toggle menu__link dropbtn"
               [routerLink]="['/historia']"
-              ><i class="far fa-building"></i> Programa</a
+              ><i class="far fa-building"></i> Condición 1</a
             >
             <div class="dropdown-content text-left">
               <a class="menu__link_dropdown" [routerLink]="['/historia']"
@@ -132,7 +115,7 @@
               routerLinkActive="router-link-active"
               class="nav-link dropdown-toggle menu__link dropbtn"
               [routerLink]="['/plandeestudios']"
-              ><i class="fas fa-university"></i> Formación</a
+              ><i class="fas fa-university"></i> Condición 2</a
             >
             <div class="dropdown-content text-left">
               <a class="menu__link_dropdown" [routerLink]="['/plandeestudios']"
@@ -152,13 +135,15 @@
               class="nav-link dropdown-toggle menu__link dropbtn"
               [routerLink]="['/agendaPrograma']"
             >
-              <i class="far fa-newspaper"></i> Actividades
+              <i class="far fa-newspaper"></i> Condición 3
             </a>
             <div class="dropdown-content text-left">
               <a class="menu__link_dropdown" [routerLink]="['/agendaPrograma']"
                 ><i class="fas fa-newspaper"></i> De Programa</a
               >
-              <a class="menu__link_dropdown" [routerLink]="['/agendaInstitucional']"
+              <a
+                class="menu__link_dropdown"
+                [routerLink]="['/agendaInstitucional']"
                 ><i class="fas fa-rss-square"></i> Institucionales</a
               >
             </div>
@@ -169,7 +154,7 @@
               routerLinkActive="router-link-active"
               class="nav-link menu__link"
               [routerLink]="['/gruposInvestigacion']"
-              ><i class="fas fa-microscope"></i> Investigación</a
+              ><i class="fas fa-microscope"></i> Condición 4</a
             >
           </li>
           <li class="nav-item dropdown menu__group">
@@ -178,7 +163,7 @@
               class="nav-link dropdown-toggle menu__link dropbtn"
               [routerLink]="['/estudiantes']"
             >
-              <i class="fas fa-user-circle"></i> Estudiantes
+              <i class="fas fa-user-circle"></i> Condición 5
             </a>
             <div class="dropdown-content text-left">
               <a class="menu__link_dropdown" [routerLink]="['/estudiantes']"
@@ -203,7 +188,7 @@
               routerLinkActive="router-link-active"
               class="nav-link dropdown-toggle menu__link dropbtn"
               [routerLink]="['/docentes']"
-              ><i class="fas fa-users"></i> Profesores</a
+              ><i class="fas fa-users"></i> Condición 6</a
             >
             <div class="dropdown-content text-left">
               <a class="menu__link_dropdown" [routerLink]="['/docentes']"
@@ -215,15 +200,6 @@
                 ><i class="fas fa-scroll"></i> Artículos publicados</a
               >
             </div>
-          </li>
-          <li class="menu__group">
-            <a
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link menu__link"
-              [routerLink]="['/biblioteca']"
-              ><i class="fas fa-book"></i> Biblioteca</a
-            >
           </li>
           <li class="menu__group">
             <ng-template #showLogin>
