@@ -13,6 +13,7 @@ import 'firebase/auth';
 import { map } from 'rxjs/operators';
 import { AgendaprogramaService } from '../services/agenda/agendaprograma.service';
 import { AgendainstitucionalService } from '../services/agenda/agendainstitucional.service';
+import { TituloService } from '../services/titulo/titulodinamico.service';
 
 
 // tslint:disable-next-line:prefer-const
@@ -57,7 +58,7 @@ export class HomeComponent implements OnInit {
   actualEvento = null;
   actualIndex = -1;
   // tslint:disable-next-line:no-shadowed-variable
-  constructor( public auth: AngularFireAuth, private listadoService: ListadoService, private denominaciionService: DenominacionService, private agendaProgramaService: AgendaprogramaService, private agendaInstitucionalService: AgendainstitucionalService, private modalService: NgbModal, private activatedRoute: ActivatedRoute, private router: Router, private carruselServices: CarruselService, private articulosEstuService: ArticulosestuService, private articulosProService: ArticulosproService, private plantelService: PlantelService ) {
+  constructor( private headerTitleService: TituloService, public auth: AngularFireAuth, private listadoService: ListadoService, private denominaciionService: DenominacionService, private agendaProgramaService: AgendaprogramaService, private agendaInstitucionalService: AgendainstitucionalService, private modalService: NgbModal, private activatedRoute: ActivatedRoute, private router: Router, private carruselServices: CarruselService, private articulosEstuService: ArticulosestuService, private articulosProService: ArticulosproService, private plantelService: PlantelService ) {
     this.agendaProgramaService.getAgendas().subscribe( data => {
       this.agenda = data;
     });
@@ -115,6 +116,7 @@ export class HomeComponent implements OnInit {
     });
   }
   ngOnInit() {
+    this.headerTitleService.setTitle('Condiciones de Calidad para la Creación y Funcionamiento de Programas Académicos');
     this.obtenerEventosPrograma();
     this.obtenerEventosInstitucionales();
   }

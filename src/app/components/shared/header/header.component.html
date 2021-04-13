@@ -54,174 +54,207 @@
         </a>
       </div>
       <div class="col text-center align-items-center">
-        <h5
-          class="caki text-uppercase font-weight-bold"
-        >
-          SACES
-        </h5>
+        <h5 class="caki text-uppercase font-weight-bold">{{ title }}</h5>
       </div>
     </div>
   </div>
 </div>
 <header class="header">
-  <nav class="navbar menu navbar-expand-lg menu bgRedInst">
-    <div class="container">
-      <button
-        class="navbar-toggler navlinkin"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
+  <nav class="navbar menu navbar-expand-lg menu bgCafeInstitu">
+    <button
+      class="navbar-toggler navlinkin"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto menu__list">
-          <li class="menu__group">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto menu__list">
+        <li class="menu__group">
+          <a
+            style="padding: 10px"
+            class="nav-link menu__link"
+            [routerLink]="['/inicio']"
+            routerLinkActive="router-link-active"
+            ><i class="fas fa-home"></i> Inicio</a
+          >
+        </li>
+        <li class="menu__group dropdown menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/historia']"
+            placement="top"
+            ngbTooltip="Denominación del programa"
+            >Condición 1</a
+          >
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-book-open"></i> Administrar</a
+            >
+          </div>
+        </li>
+        <li class="menu__group dropdown menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/plandeestudios']"
+            placement="top"
+            ngbTooltip="Justificación del programa"
+            >Condición 2</a
+          >
+          <div class="dropdown-content text-left">
+            <a class="menu__link_dropdown" [routerLink]="['/plandeestudios']"
+              ><i class="fas fa-book-reader"></i> Plan de estudios</a
+            >
+            <a class="menu__link_dropdown" [routerLink]="['/competencias']"
+              ><i class="fas fa-bullseye"></i> Competencias</a
+            >
+            <a class="menu__link_dropdown" [routerLink]="['/perfil']"
+              ><i class="fas fa-user-tie"></i> Perfil</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown menu__group">
+          <a
+            style="padding: 10px"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/agendaPrograma']"
+            placement="top"
+            ngbTooltip="Aspectos curriculares"
+          >
+            Condición 3
+          </a>
+          <div class="dropdown-content text-left">
+            <a class="menu__link_dropdown" [routerLink]="['/agendaPrograma']"
+              ><i class="fas fa-newspaper"></i> De Programa</a
+            >
+            <a
+              class="menu__link_dropdown"
+              [routerLink]="['/agendaInstitucional']"
+              ><i class="fas fa-rss-square"></i> Institucionales</a
+            >
+          </div>
+        </li>
+        <li class="menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link menu__link"
+            [routerLink]="['/gruposInvestigacion']"
+            placement="top"
+            ngbTooltip="Organización actividades académicas y proceso formativo"
+            >Condición 4</a
+          >
+        </li>
+        <li class="menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link menu__link"
+            [routerLink]="['/gruposInvestigacion']"
+            placement="top"
+            ngbTooltip="Investigación, innovación y/o creación artística y cultural"
+            >Condición 5</a
+          >
+        </li>
+        <li class="menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link menu__link"
+            [routerLink]="['/gruposInvestigacion']"
+            placement="top"
+            ngbTooltip="Relación con el sector externo"
+            >Condición 6</a
+          >
+        </li>
+        <li class="menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link menu__link"
+            [routerLink]="['/gruposInvestigacion']"
+            placement="top"
+            ngbTooltip="Profesores"
+            >Condición 7</a
+          >
+        </li>
+        <li class="nav-item dropdown menu__group">
+          <a
+            style="padding: 10px"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/estudiantes']"
+            placement="top"
+            ngbTooltip="Medios educativos"
+          >
+            Condición 8
+          </a>
+          <div class="dropdown-content text-left">
+            <a class="menu__link_dropdown" [routerLink]="['/estudiantes']"
+              ><i class="fas fa-user-friends"></i> Nuestros estudiantes</a
+            >
+            <a
+              class="menu__link_dropdown"
+              [routerLink]="['/articulosEstudiantes']"
+              ><i class="fas fa-paperclip"></i> Artículos publicados</a
+            >
+            <a class="menu__link_dropdown" [routerLink]="['/tesis']"
+              ><i class="fas fa-file-pdf"></i> Tesis</a
+            >
+            <a class="menu__link_dropdown" [routerLink]="['/egresados']"
+              ><i class="fas fa-user-graduate"></i> Egresados</a
+            >
+          </div>
+        </li>
+        <li class="menu__group dropdown menu__group">
+          <a
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/docentes']"
+            placement="top"
+            ngbTooltip="Infraestructura física y tecnológica"
+            >Condición 9</a
+          >
+          <div class="dropdown-content text-left">
+            <a class="menu__link_dropdown" [routerLink]="['/docentes']"
+              ><i class="fas fa-user-friends"></i> Plantel</a
+            >
+            <a
+              class="menu__link_dropdown"
+              [routerLink]="['/articulosProfesores']"
+              ><i class="fas fa-scroll"></i> Artículos publicados</a
+            >
+          </div>
+        </li>
+        <li class="menu__group">
+          <ng-template #showLogin>
             <a
               style="padding: 10px"
+              routerLinkActive="router-link-active"
               class="nav-link menu__link"
-              [routerLink]="['/inicio']"
-              routerLinkActive="router-link-active"
-              ><i class="fas fa-home"></i> Inicio</a
+              (click)="openSm(formAdmin)"
+              ><i class="fas fa-lock"></i> Ingresar</a
             >
-          </li>
-          <li class="menu__group dropdown menu__group">
-            <a
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link dropdown-toggle menu__link dropbtn"
-              [routerLink]="['/historia']"
-              ><i class="far fa-building"></i> Condición 1</a
-            >
-            <div class="dropdown-content text-left">
-              <a class="menu__link_dropdown" [routerLink]="['/historia']"
-                ><i class="fas fa-book-open"></i> Historia</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/organigrama']"
-                ><i class="fas fa-code-branch"></i> Organigrama</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/ubicacion']"
-                ><i class="fas fa-map-marker-alt"></i> Ubicación</a
-              >
-            </div>
-          </li>
-          <li class="menu__group dropdown menu__group">
-            <a
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link dropdown-toggle menu__link dropbtn"
-              [routerLink]="['/plandeestudios']"
-              ><i class="fas fa-university"></i> Condición 2</a
-            >
-            <div class="dropdown-content text-left">
-              <a class="menu__link_dropdown" [routerLink]="['/plandeestudios']"
-                ><i class="fas fa-book-reader"></i> Plan de estudios</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/competencias']"
-                ><i class="fas fa-bullseye"></i> Competencias</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/perfil']"
-                ><i class="fas fa-user-tie"></i> Perfil</a
-              >
-            </div>
-          </li>
-          <li class="nav-item dropdown menu__group">
-            <a
-              style="padding: 10px"
-              class="nav-link dropdown-toggle menu__link dropbtn"
-              [routerLink]="['/agendaPrograma']"
-            >
-              <i class="far fa-newspaper"></i> Condición 3
-            </a>
-            <div class="dropdown-content text-left">
-              <a class="menu__link_dropdown" [routerLink]="['/agendaPrograma']"
-                ><i class="fas fa-newspaper"></i> De Programa</a
-              >
-              <a
-                class="menu__link_dropdown"
-                [routerLink]="['/agendaInstitucional']"
-                ><i class="fas fa-rss-square"></i> Institucionales</a
-              >
-            </div>
-          </li>
-          <li class="menu__group">
-            <a
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link menu__link"
-              [routerLink]="['/gruposInvestigacion']"
-              ><i class="fas fa-microscope"></i> Condición 4</a
-            >
-          </li>
-          <li class="nav-item dropdown menu__group">
-            <a
-              style="padding: 10px"
-              class="nav-link dropdown-toggle menu__link dropbtn"
-              [routerLink]="['/estudiantes']"
-            >
-              <i class="fas fa-user-circle"></i> Condición 5
-            </a>
-            <div class="dropdown-content text-left">
-              <a class="menu__link_dropdown" [routerLink]="['/estudiantes']"
-                ><i class="fas fa-user-friends"></i> Nuestros estudiantes</a
-              >
-              <a
-                class="menu__link_dropdown"
-                [routerLink]="['/articulosEstudiantes']"
-                ><i class="fas fa-paperclip"></i> Artículos publicados</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/tesis']"
-                ><i class="fas fa-file-pdf"></i> Tesis</a
-              >
-              <a class="menu__link_dropdown" [routerLink]="['/egresados']"
-                ><i class="fas fa-user-graduate"></i> Egresados</a
-              >
-            </div>
-          </li>
-          <li class="menu__group dropdown menu__group">
-            <a
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link dropdown-toggle menu__link dropbtn"
-              [routerLink]="['/docentes']"
-              ><i class="fas fa-users"></i> Condición 6</a
-            >
-            <div class="dropdown-content text-left">
-              <a class="menu__link_dropdown" [routerLink]="['/docentes']"
-                ><i class="fas fa-user-friends"></i> Plantel</a
-              >
-              <a
-                class="menu__link_dropdown"
-                [routerLink]="['/articulosProfesores']"
-                ><i class="fas fa-scroll"></i> Artículos publicados</a
-              >
-            </div>
-          </li>
-          <li class="menu__group">
-            <ng-template #showLogin>
-              <a
-                style="padding: 10px"
-                routerLinkActive="router-link-active"
-                class="nav-link menu__link"
-                (click)="openSm(formAdmin)"
-                ><i class="fas fa-lock"></i> Ingresar</a
-              >
-            </ng-template>
-            <a
-              *ngIf="auth.user | async; else showLogin"
-              style="padding: 10px"
-              routerLinkActive="router-link-active"
-              class="nav-link menu__link cursorSelect"
-              (click)="logout()"
-              ><i class="fas fa-door-open"></i> Salir</a
-            >
-          </li>
-        </ul>
-      </div>
+          </ng-template>
+          <a
+            *ngIf="auth.user | async; else showLogin"
+            style="padding: 10px"
+            routerLinkActive="router-link-active"
+            class="nav-link menu__link cursorSelect"
+            (click)="logout()"
+            ><i class="fas fa-door-open"></i> Salir</a
+          >
+        </li>
+      </ul>
     </div>
   </nav>
 </header>

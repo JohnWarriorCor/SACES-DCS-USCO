@@ -3,10 +3,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import 'firebase/auth';
-import firebase from '@firebase/app';
 import { Router } from '@angular/router';
 import { ToastService } from '../../../services/toast/toast.service';
 import { ToastrService } from 'ngx-toastr';
+import { TituloService } from '../../../services/titulo/titulodinamico.service';
 
 @Component({
   selector: 'app-header',
@@ -27,9 +27,10 @@ export class HeaderComponent implements OnInit {
   hidePass =  true;
   email = '';
   pass = '';
+  title = '';
 
   // tslint:disable-next-line:no-shadowed-variable
-  constructor( private myToast: ToastService, private toastr: ToastrService, public toastService: ToastService, public auth: AngularFireAuth, private router: Router, private modalService: NgbModal, ) {
+  constructor( private headerTitleService: TituloService, private toastr: ToastrService, public toastService: ToastService, public auth: AngularFireAuth, private router: Router, private modalService: NgbModal, ) {
   }
   showSuccess() {
     this.toastr.success('Acceso exitoso', 'Bienvenido', {
@@ -74,6 +75,9 @@ export class HeaderComponent implements OnInit {
     this.modalReference = this.modalService.open(confirmar, { centered: true, size: 'sm', backdrop: 'static', windowClass: 'fade-in'});
   }
   ngOnInit() {
+    this.headerTitleService.title.subscribe(updatedTitle => {
+      this.title = updatedTitle;
+    });
   }
   loginWith() {
     // tslint:disable-next-line:new-parens

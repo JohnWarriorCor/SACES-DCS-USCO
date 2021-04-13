@@ -44,8 +44,11 @@ html {
 .colorRedInst {
   color: #8f141b;
 }
-.bgRedInst {
+.bg-rojo-inst {
   background-color: #8f141b;
+}
+.bgCafeInstitu {
+  background-color: #dfd4a6;
 }
 .bgrojoycafe {
   background-color: #8f141b;
@@ -201,7 +204,7 @@ ngb-pagination ::ng-deep ul > li.active > a {
 }
 #sp-logo-wrap {
   padding: 37px 0;
-  background-color: #fff;
+  background-color: #8f141a;
 }
 .txtcenter {
   text-align: center;
@@ -281,7 +284,7 @@ ngb-pagination ::ng-deep ul > li.active > a {
   text-decoration: none;
 }
 
-input:invalid {
+.input:invalid {
   border: 1px solid red;
   box-shadow: 0 0 3px 1px red;
 }
