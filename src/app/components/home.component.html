@@ -8,143 +8,828 @@
           Calificado
         </h3>
         <hr class="lineInstRed" />
-        <div class="container text-center">
+        <div>
           <br />
           <hr />
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              (mouseover)="hover1 = true"
-              (mouseout)="hover1 = false"
-              [ngClass]="{ claro2: hover1 }"
-              [routerLink]="['/DenominacionDelPrograma', 'nuevo']"
-              class="factores"
-            >
-              Denominación del programa
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/JustificacionDelPrograma', 'nuevo']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover2 = true"
-              (mouseout)="hover2 = false"
-              [ngClass]="{ claro2: hover2 }"
-              class="factores"
-            >
-              Justificación del programa
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/AspectosCurriculares']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover3 = true"
-              (mouseout)="hover3 = false"
-              [ngClass]="{ claro2: hover3 }"
-              class="factores"
-            >
-              Aspectos curriculares
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/AcademicasProcesosFormativos']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover4 = true"
-              (mouseout)="hover4 = false"
-              [ngClass]="{ claro2: hover4 }"
-              class="factores"
-            >
-              Organización actividades académicas y proceso formativo
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/InvestigacionInnovacion']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover5 = true"
-              (mouseout)="hover5 = false"
-              [ngClass]="{ claro2: hover5 }"
-              class="factores"
-            >
-              Investigación, innovación y/o creación artística y cultural
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/SectorExerno']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover6 = true"
-              (mouseout)="hover6 = false"
-              [ngClass]="{ claro2: hover6 }"
-              class="factores"
-            >
-              Relación con el sector externo
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/Profesor']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover7 = true"
-              (mouseout)="hover7 = false"
-              [ngClass]="{ claro2: hover7 }"
-              class="factores"
-            >
-              Profesores
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/MediosEducativos']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover8 = true"
-              (mouseout)="hover8 = false"
-              [ngClass]="{ claro2: hover8 }"
-              class="factores"
-            >
-              Medios educativos
-            </h3>
-          </div>
-          <div
-            class="row align-items-center text-center cursorSelect"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <h3
-              [routerLink]="['/InfraestructuraFisicaTecnologica']"
-              routerLinkActive="router-link-active"
-              (mouseover)="hover9 = true"
-              (mouseout)="hover9 = false"
-              [ngClass]="{ claro2: hover9 }"
-              class="factores"
-            >
-              Infraestructura física y tecnológica
-            </h3>
-          </div>
+          <section id="team" class="pb-5">
+            <div class="container">
+              <div class="row">
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip">
+                    <div class="mainflip flip-0">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-university fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Denominación del Programa
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <p class="card-text" style="margin-top: 70px">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-comment-dots fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Justificación del programa
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-clipboard-list fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">Aspectos curriculares</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-sitemap fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Organización actividades académicas y proceso formativo
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-search fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Investigación, innovación y/o creación artística y cultural
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-sign-out-alt fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Relación con el sector externo
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-user-tie fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Profesores
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-book-open fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Medios educativos
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div
+                    class="image-flip"
+                    ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div class="mainflip">
+                      <div class="frontside">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <p>
+                              <i
+                                class="fas fa-laptop fa-5x"
+                                style="
+                                  background-color: white;
+                                  padding: 15px;
+                                  border-radius: 50%;
+                                "
+                              ></i>
+                            </p>
+                            <h4 class="card-title">
+                              Infraestructura física y tecnológica
+                            </h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <a
+                              href="https://www.fiverr.com/share/qb8D02"
+                              class="btn btn-primary btn-sm"
+                              ><i class="fa fa-plus"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="backside">
+                        <div class="card">
+                          <div class="card-body text-center mt-4">
+                            <h4 class="card-title">Sunlimetech</h4>
+                            <p class="card-text">
+                              This is basic card with image on top, title,
+                              description and button.This is basic card with
+                              image on top, title, description and button.This
+                              is basic card with image on top, title,
+                              description and button.
+                            </p>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-skype"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a
+                                  class="social-icon text-xs-center"
+                                  target="_blank"
+                                  href="https://www.fiverr.com/share/qb8D02"
+                                >
+                                  <i class="fa fa-google"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./Team member -->
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

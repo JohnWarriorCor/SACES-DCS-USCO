@@ -148,18 +148,87 @@
   <!-- Copyright -->
   <ng-template #showLogin>
     <div
-      class="footer-copyright text-center py-3"
-      style="background-color: #4d626c; color: #ededed"
+      class="footer-copyright text-center"
+      id="accordionExample"
+      style="
+        background-color: #4d626c;
+        color: #ededed;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+      "
     >
-      © 2021 Doctorado en Ciencias de la Salud. Universidad Surcolombiana |
-      <i class="fas fa-lock"></i
-      ><a
-        style="color: aliceblue"
-        class="cursorSelect"
-        (click)="openSm(formAdmin)"
+      <div
+        class="card text-center"
+        style="
+          background-color: #4d626c;
+          color: #ededed;
+          border: 0px;
+          margin: 0px;
+          padding: 0px;
+        "
       >
-        Ingresar</a
-      >
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-center"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <span style="color: aliceblue"
+                >© {{ today | date: "yyyy" }} Doctorado en Ciencias de la Salud. Universidad
+                Surcolombiana |
+              </span>
+              <a
+                style="color: aliceblue"
+                class="cursorSelect"
+                (click)="openSm(formAdmin)"
+              >
+                <i class="fas fa-lock"></i> Ingresar</a
+              >
+            </button>
+          </h2>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <article class="text-center">
+              <small class="text-uppercase font-weight-bold"
+                >Propiedad intelectual:</small
+              ><br />
+              <small style="font-size: 13px" class="font-weight-bold"
+                >Todos los contenidos de este sitio (incluyendo, pero no
+                limitado a, texto, logotipos, contenido, fotografías, audio,
+                botones, nombres comerciales y vídeo) están sujetos a derechos
+                de propiedad por las leyes de Derechos de Autor y demás Leyes
+                relativas Internacionales a:</small
+              ><br />
+              <small class="text-uppercase font-weight-bold"
+                >&copy;Copyright {{ today | date: "yyyy" }} - Doctora DOLLY ARIAS TORRES</small
+              ><br />
+              <small class="text-uppercase font-weight-bold"
+                >&copy;Copyright {{ today | date: "yyyy" }} - Doctor Nicolás Arturo Núñez Gómez</small
+              ><br />
+              <small class="text-uppercase font-weight-bold"
+                >&copy;Copyright {{ today | date: "yyyy" }} - Tecnólogo John David Guerrero
+                Córodoba</small
+              ><br />
+              <small style="font-size: 13px" class="font-weight-bold"
+                >y de terceros titulares de los mismos que han autorizado
+                debidamente su inclusión.</small
+              ><br />
+            </article>
+          </div>
+        </div>
+      </div>
     </div>
   </ng-template>
   <!--<div
@@ -177,37 +246,19 @@
             style="width: 40%;"
           />
         </a>
-      </div>
-      <div class="col">
-        <a
-          href="https://www.mineducacion.gov.co/sistemasinfo/snies/"
-          target="_blank"
-        >
-          <img
-            class="rounded mx-auto d-block"
-            src="assets/snies.png"
-            alt="Sistema Nacional de Informacion de la Educacion Superior (SNIES)"
-            title="Sistema Nacional de Informacion de la Educacion Superior (SNIES)"
-            style="width: 50%;"
-          />
-        </a>
-      </div>
-      <div class="col">
-        <a
-          href="https://www.mineducacion.gov.co/portal/Educacion-superior/"
-          target="_blank"
-        >
-          <img
-            class="rounded mx-auto d-block"
-            src="assets/minedu.png"
-            alt="Ministerio de educación - Educación superior"
-            title="Ministerio de educación - Educación superior"
-            style="width: 50%;"
-          />
-        </a>
-      </div>
-    </div>
-  </div>-->
+            </div>
+            <div class="col">
+                <a href="https://www.mineducacion.gov.co/sistemasinfo/snies/" target="_blank">
+                    <img class="rounded mx-auto d-block" src="assets/snies.png" alt="Sistema Nacional de Informacion de la Educacion Superior (SNIES)" title="Sistema Nacional de Informacion de la Educacion Superior (SNIES)" style="width: 50%;" />
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.mineducacion.gov.co/portal/Educacion-superior/" target="_blank">
+                    <img class="rounded mx-auto d-block" src="assets/minedu.png" alt="Ministerio de educación - Educación superior" title="Ministerio de educación - Educación superior" style="width: 50%;" />
+                </a>
+            </div>
+        </div>
+    </div>-->
   <div
     *ngIf="auth.user | async; else showLogin"
     class="footer-copyright text-center py-3"

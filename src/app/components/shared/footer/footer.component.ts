@@ -14,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
   styles: []
 })
 export class FooterComponent implements OnInit {
+  public isCollapsed = false;
   open = false;
   emailstring = 'mailto:doctoradoencienciasdelasalud@usco.edu.co';
   today = new Date();

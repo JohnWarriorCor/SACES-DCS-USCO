@@ -25,16 +25,6 @@ import { TituloService } from '../services/titulo/titulodinamico.service';
 })
 
 export class HomeComponent implements OnInit {
-  hover0 = false;
-  hover1 = false;
-  hover2 = false;
-  hover3 = false;
-  hover4 = false;
-  hover5 = false;
-  hover6 = false;
-  hover7 = false;
-  hover8 = false;
-  hover9 = false;
   pageEstudiantes = 1;
   pageSizeEstudiantes = 4;
   pageProfesores = 1;

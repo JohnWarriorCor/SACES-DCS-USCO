@@ -5,7 +5,6 @@
   border: solid 1px white;
   font-family: Open, sans-serif;
 }
-
 :host ::ng-deep .tabset1 a.nav-link.active {
   color: white;
   background-color: #8f141b;
@@ -288,12 +287,8 @@ a.activeTab:hover {
   color: #8f141b;
 }
 .factores {
-  font-size: 20px;
-  height: 50px;
-  width: 600px;
   border-radius: 15px 0px 15px 0px;
   background-color: #8f141b;
-  padding: 10px;
   color: #dfd4a6;
 }
 
@@ -411,7 +406,7 @@ a.activeTab:hover {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.5em + .75rem + 2px);
+  height: calc(1.5em + 0.75rem + 2px);
   margin: 0;
   opacity: 0;
 }
@@ -422,14 +417,14 @@ a.activeTab:hover {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(1.5em + .75rem);
-  padding: .375rem .75rem;
+  height: calc(1.5em + 0.75rem);
+  padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #dfd4a6;
   content: "Adjuntar";
   background-color: #8f141b;
   border-left: inherit;
-  border-radius: 0 .25rem .25rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 .my-custom-class .tooltip-inner {
   background-color: #8f141b;
@@ -438,4 +433,128 @@ a.activeTab:hover {
 }
 .my-custom-class .arrow::before {
   border-top-color: #8f141b;
+}
+/* FontAwesome for working BootSnippet :> */
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #8f141b;
+  border-color: #8f141b;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #8f141b;
+  border-color: #8f141b;
+}
+
+section .section-title {
+  text-align: center;
+  color: #8f141b;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background-image: linear-gradient(#8f141b 20%, white 10%);
+  border: solid 1px #8f141b;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #8f141b !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #8f141b !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
