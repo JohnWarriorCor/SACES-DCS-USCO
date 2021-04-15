@@ -434,10 +434,6 @@ a.activeTab:hover {
 .my-custom-class .arrow::before {
   border-top-color: #8f141b;
 }
-/* FontAwesome for working BootSnippet :> */
-
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -489,7 +485,7 @@ section .section-title {
   -webkit-transform-style: preserve-3d;
   -ms-transition: 1s;
   -moz-transition: 1s;
-  -moz-transform: perspective(1000px);
+  -webkit-moz-transform: perspective(1000px);
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transition: 1s;
@@ -499,8 +495,8 @@ section .section-title {
 
 .frontside {
   position: relative;
-  -webkit-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
+  -webkit-webkit-transform: rotateY(0deg);
+  -webkit-ms-transform: rotateY(0deg);
   z-index: 2;
   margin-bottom: 30px;
 }
@@ -540,7 +536,7 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-  min-height: 312px;
+  min-height: 120px;
 }
 
 .backside .card a {
@@ -557,4 +553,14 @@ section .section-title {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+
+.lista-sinsangria {
+  list-style:none;
+  padding-left:0;
+}
+
+.text-backside { 
+  margin-top: 20px;
+  font-size: 10px;
 }
