@@ -1,0 +1,153 @@
+<div class="wrapper fadeIn fast">
+  <div>
+    <div class="container" style="padding-top: 30px; padding-bottom: 30px">
+      <div class="row">
+        <div class="col-sm-8 shadow text-justify fondodivleft shadow">
+          <h3 class="titleInstRed">
+            <i class="fas fa-university"></i> Condición 1
+          </h3>
+          <hr class="lineInstRed" />
+          <br />
+          <section *ngFor="let item of condicion1; let i = index">
+            <table class="table table-bordered parinst">
+              <thead class="tablatit text-center">
+                <tr>
+                  <th colspan="2" scope="col">
+                    Tabla 1 Denominación académica del programa
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Nombre del Programa:</th>
+                  <td>{{ item.nombrePrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Titulo a otorgar:</th>
+                  <td>{{ item.tituloOtorgaPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Nivel Académico:</th>
+                  <td>{{ item.nivelAcademicoPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Nivel Formación:</th>
+                  <td>{{ item.nivelFormacionPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Área del Conocimiento:</th>
+                  <td>{{ item.areaConocimientoPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Localización del Programa:</th>
+                  <td>{{ item.localizacionPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Dirección:</th>
+                  <td>{{ item.direccionPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Teléfono:</th>
+                  <td>{{ item.telefonoPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Fax:</th>
+                  <td>{{ item.faxPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Página Web institucional:</th>
+                  <td>
+                    <a [href]="item.webPrograma" target="_blank">{{
+                      item.webPrograma
+                    }}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>E Mail:</th>
+                  <td>{{ item.emailPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Entidad oferente:</th>
+                  <td>{{ item.entidadOferentePrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Metodología:</th>
+                  <td>{{ item.emailPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Número de créditos:</th>
+                  <td>{{ item.creditosPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Duración:</th>
+                  <td>{{ item.duracionPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Número de estudiantes:</th>
+                  <td>{{ item.estudiantesPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Periodicidad de admisiones:</th>
+                  <td>{{ item.admisionPrograma }}</td>
+                </tr>
+                <tr>
+                  <th>Costo de matrícula semestral:</th>
+                  <td>
+                    <a [href]="item.urlCostoPrograma" target="_blank">{{
+                      item.costoPrograma
+                    }}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Norma interna de creación del Programa:</th>
+                  <td>
+                    <a [href]="item.urlNormaPrograma" target="_blank">{{
+                      item.normaPrograma
+                    }}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Registro Calificado Otorgado por el Ministerio de Educación
+                    Nacional:
+                  </th>
+                  <td>
+                    <a [href]="item.urlRegsitroPrograma" target="_blank">{{
+                      item.regsitroPrograma
+                    }}</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <div class="row" *ngIf="auth.user | async">
+              <div class="col text-right">
+                <a
+                  class="btn navlinkinSolid m-2"
+                  [routerLink]="['/admi_condicion1', item.key]"
+                  ><i class="fas fa-pencil-alt"></i> Editar</a
+                ><br />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-sm-auto fondodivright shadow">
+          <h3 class="titleInstRed"><i class="fas fa-rss"></i> Universidad</h3>
+          <hr class="lineInstRed" />
+          <br />
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUSCOoficial%2F&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+            width="100%"
+            height="500"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
+            allowTransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

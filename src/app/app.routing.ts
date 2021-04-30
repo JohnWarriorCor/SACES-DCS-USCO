@@ -41,10 +41,14 @@ import { AgendaprogramaComponent } from './components/pages/agenda/agendaprogram
 import { AgendainstitucionalComponent } from './components/pages/agenda/agendainstitucional/agendainstitucional.component';
 import { AgendaprogramaeditComponent } from './components/admin/agendaedit/agendaprogramaedit/agendaprogramaedit.component';
 import { AgendainstitucionaleditComponent } from './components/admin/agendaedit/agendainstitucionaledit/agendainstitucionaledit.component';
+import { Condicion1editComponent } from './components/admin/condicion1edit/condicion1edit.component';
+import { Condicion1Component } from './components/pages/condicion1/condicion1.component';
 
 const routes: Routes = [
   // INICIO
   { path: 'inicio', component: HomeComponent },
+  // CONDICIÓN 1
+  { path: 'Denominacion_academica_del_programa', component: Condicion1Component },
   // PROGRAMA
   { path: 'programa', component: ProgramaComponent },
   { path: 'historia', component: HistoriaComponent },
@@ -84,6 +88,8 @@ const routes: Routes = [
 
   // RUTAS ADMINISTRADOR
   { path: 'admi_login', component: LoginComponent },
+  // CONDICION 1
+  { path: 'admi_condicion1/:id', component: Condicion1editComponent, canActivate: [AuthGuard] },
   // INICIO
   { path: 'admi_denominacion/:id', component: DenominacionComponent, canActivate: [AuthGuard] },
   { path: 'admi_carrusel', component: CarruselComponent, canActivate: [AuthGuard] },

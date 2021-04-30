@@ -99,6 +99,10 @@ html {
   padding: 30px;
   margin-bottom: 10px;
 }
+.tablatit{
+  color: white;
+  background-color: #4e6470;
+}
 .fondodivCenter {
   background-color: white;
   border-radius: 12px;

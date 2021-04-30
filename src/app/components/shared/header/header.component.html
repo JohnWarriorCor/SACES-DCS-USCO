@@ -90,14 +90,14 @@
             style="padding: 10px"
             routerLinkActive="router-link-active"
             class="nav-link dropdown-toggle menu__link dropbtn"
-            [routerLink]="['/historia']"
+            [routerLink]="['/Denominacion_academica_del_programa']"
             placement="top"
             ngbTooltip="Denominación del programa"
             >Condición 1</a
           >
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
-            <a class="menu__link_dropdown" [routerLink]="['/historia']"
-              ><i class="fas fa-book-open"></i> Administrar</a
+            <a class="menu__link_dropdown" [routerLink]="['/admi_condicion1','-MZZWo47rlDdMyQfygKN']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
         </li>
@@ -111,15 +111,9 @@
             ngbTooltip="Justificación del programa"
             >Condición 2</a
           >
-          <div class="dropdown-content text-left">
-            <a class="menu__link_dropdown" [routerLink]="['/plandeestudios']"
-              ><i class="fas fa-book-reader"></i> Plan de estudios</a
-            >
-            <a class="menu__link_dropdown" [routerLink]="['/competencias']"
-              ><i class="fas fa-bullseye"></i> Competencias</a
-            >
-            <a class="menu__link_dropdown" [routerLink]="['/perfil']"
-              ><i class="fas fa-user-tie"></i> Perfil</a
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
         </li>
@@ -133,60 +127,75 @@
           >
             Condición 3
           </a>
-          <div class="dropdown-content text-left">
-            <a class="menu__link_dropdown" [routerLink]="['/agendaPrograma']"
-              ><i class="fas fa-newspaper"></i> De Programa</a
-            >
-            <a
-              class="menu__link_dropdown"
-              [routerLink]="['/agendaInstitucional']"
-              ><i class="fas fa-rss-square"></i> Institucionales</a
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
         </li>
-        <li class="menu__group">
+        <li class="menu__group dropdown menu__group">
           <a
             style="padding: 10px"
             routerLinkActive="router-link-active"
-            class="nav-link menu__link"
-            [routerLink]="['/gruposInvestigacion']"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/historia']"
             placement="top"
             ngbTooltip="Organización actividades académicas y proceso formativo"
             >Condición 4</a
           >
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
+            >
+          </div>
         </li>
-        <li class="menu__group">
+        <li class="menu__group dropdown menu__group">
           <a
             style="padding: 10px"
             routerLinkActive="router-link-active"
-            class="nav-link menu__link"
-            [routerLink]="['/gruposInvestigacion']"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/historia']"
             placement="top"
             ngbTooltip="Investigación, innovación y/o creación artística y cultural"
             >Condición 5</a
           >
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
+            >
+          </div>
         </li>
-        <li class="menu__group">
+        <li class="menu__group dropdown menu__group">
           <a
             style="padding: 10px"
             routerLinkActive="router-link-active"
-            class="nav-link menu__link"
-            [routerLink]="['/gruposInvestigacion']"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/historia']"
             placement="top"
             ngbTooltip="Relación con el sector externo"
             >Condición 6</a
           >
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
+            >
+          </div>
         </li>
-        <li class="menu__group">
+        <li class="menu__group dropdown menu__group">
           <a
             style="padding: 10px"
             routerLinkActive="router-link-active"
-            class="nav-link menu__link"
-            [routerLink]="['/gruposInvestigacion']"
+            class="nav-link dropdown-toggle menu__link dropbtn"
+            [routerLink]="['/historia']"
             placement="top"
             ngbTooltip="Profesores"
             >Condición 7</a
           >
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
+            >
+          </div>
         </li>
         <li class="nav-item dropdown menu__group">
           <a
@@ -198,20 +207,9 @@
           >
             Condición 8
           </a>
-          <div class="dropdown-content text-left">
-            <a class="menu__link_dropdown" [routerLink]="['/estudiantes']"
-              ><i class="fas fa-user-friends"></i> Nuestros estudiantes</a
-            >
-            <a
-              class="menu__link_dropdown"
-              [routerLink]="['/articulosEstudiantes']"
-              ><i class="fas fa-paperclip"></i> Artículos publicados</a
-            >
-            <a class="menu__link_dropdown" [routerLink]="['/tesis']"
-              ><i class="fas fa-file-pdf"></i> Tesis</a
-            >
-            <a class="menu__link_dropdown" [routerLink]="['/egresados']"
-              ><i class="fas fa-user-graduate"></i> Egresados</a
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
         </li>
@@ -225,14 +223,9 @@
             ngbTooltip="Infraestructura física y tecnológica"
             >Condición 9</a
           >
-          <div class="dropdown-content text-left">
-            <a class="menu__link_dropdown" [routerLink]="['/docentes']"
-              ><i class="fas fa-user-friends"></i> Plantel</a
-            >
-            <a
-              class="menu__link_dropdown"
-              [routerLink]="['/articulosProfesores']"
-              ><i class="fas fa-scroll"></i> Artículos publicados</a
+          <div class="dropdown-content text-left" *ngIf="auth.user | async">
+            <a class="menu__link_dropdown" [routerLink]="['/historia']"
+              ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
         </li>

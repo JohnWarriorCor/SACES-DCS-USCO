@@ -1,0 +1,646 @@
+<div class="wrapper fadeIn fast">
+  <div>
+    <div class="container" style="padding-top: 30px; padding-bottom: 30px">
+      <div class="row">
+        <div class="col-sm shadow text-justify fondodivleft shadow grayinst">
+          <h3 class="titleInstRed">Formulario Condición 1</h3>
+          <hr class="lineInstRed" />
+          <br />
+          <form #forma="ngForm" class="text-center">
+            <div class="row animated fadeIn fast">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Nombre del Programa:
+                    </h6>
+                    <input
+                      type="text"
+                      name="nombrePrograma"
+                      [(ngModel)]="condicion1.nombrePrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Nombre que se le ha denominado al programa"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Titulo a otorgar:
+                    </h6>
+                    <input
+                      type="text"
+                      name="tituloOtorgaPrograma"
+                      [(ngModel)]="condicion1.tituloOtorgaPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Título"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Nivel Académico:
+                    </h6>
+                    <input
+                      type="text"
+                      name="nivelAcademicoPrograma"
+                      [(ngModel)]="condicion1.nivelAcademicoPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="..."
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Nivel de formación:
+                    </h6>
+                    <input
+                      type="text"
+                      name="nivelFormacionPrograma"
+                      [(ngModel)]="condicion1.nivelFormacionPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="..."
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Área del Conocimiento:
+                    </h6>
+                    <input
+                      type="text"
+                      name="areaConocimientoPrograma"
+                      [(ngModel)]="condicion1.areaConocimientoPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="..."
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Localización del Programa:
+                    </h6>
+                    <input
+                      type="text"
+                      name="localizacionPrograma"
+                      [(ngModel)]="condicion1.localizacionPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Ciudad y municipio"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Dirección:
+                    </h6>
+                    <input
+                      type="text"
+                      name="direccionPrograma"
+                      [(ngModel)]="condicion1.direccionPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Calle o Carrera y #"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Teléfono:
+                    </h6>
+                    <input
+                      type="text"
+                      name="telefonoPrograma"
+                      [(ngModel)]="condicion1.telefonoPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Ejemplo: +57 8 870 0000"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">Fax:</h6>
+                    <input
+                      type="text"
+                      name="faxPrograma"
+                      [(ngModel)]="condicion1.faxPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Número de fax"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Página Web institucional:
+                    </h6>
+                    <input
+                      type="text"
+                      name="webPrograma"
+                      [(ngModel)]="condicion1.webPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="URL"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      E Mail:
+                    </h6>
+                    <input
+                      type="text"
+                      name="emailPrograma"
+                      [(ngModel)]="condicion1.emailPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="@email.com"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Entidad oferente:
+                    </h6>
+                    <input
+                      type="text"
+                      name="entidadOferentePrograma"
+                      [(ngModel)]="condicion1.entidadOferentePrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="..."
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Metodología:
+                    </h6>
+                    <input
+                      type="text"
+                      name="metodologiaPrograma"
+                      [(ngModel)]="condicion1.metodologiaPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Nombre que se le ha denominado al programa"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Número de créditos:
+                    </h6>
+                    <input
+                      type="number"
+                      name="creditosPrograma"
+                      [(ngModel)]="condicion1.creditosPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      max="200"
+                      min="0"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Duración:
+                    </h6>
+                    <input
+                      type="text"
+                      name="duracionPrograma"
+                      [(ngModel)]="condicion1.duracionPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Años"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Número de estudiantes:
+                    </h6>
+                    <input
+                      type="text"
+                      name="estudiantesPrograma"
+                      [(ngModel)]="condicion1.estudiantesPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Alfanumérico"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Periodicidad de admisiones:
+                    </h6>
+                    <input
+                      type="text"
+                      name="admisionPrograma"
+                      [(ngModel)]="condicion1.admisionPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Alfanumérico"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Costo de matrícula semestral:
+                    </h6>
+                    <input
+                      type="text"
+                      name="costoPrograma"
+                      [(ngModel)]="condicion1.costoPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Salarios Mínimos Legales Vigentes"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">URL:</h6>
+                    <input
+                      type="text"
+                      name="urlCostoPrograma"
+                      [(ngModel)]="condicion1.urlCostoPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Enlace del Archivo"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Norma interna de creación del Programa:
+                    </h6>
+                    <input
+                      type="text"
+                      name="normaPrograma"
+                      [(ngModel)]="condicion1.normaPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Decreto o norma"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">URL:</h6>
+                    <input
+                      type="text"
+                      name="urlNormaPrograma"
+                      [(ngModel)]="condicion1.urlNormaPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Archivo y nombre"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">
+                      Registro Calificado Otorgado por el Ministerio de
+                      Educación Nacional:
+                    </h6>
+                    <input
+                      type="text"
+                      name="regsitroPrograma"
+                      [(ngModel)]="condicion1.regsitroPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Nombre del decreto"
+                    />
+                  </div>
+                  <div class="col">
+                    <h6 class="text-left subTituloRojoInstitucional">ULR:</h6>
+                    <input
+                      type="text"
+                      name="urlRegsitroPrograma"
+                      [(ngModel)]="condicion1.urlRegsitroPrograma"
+                      class="form-control shadow p-3 inputPaciente"
+                      placeholder="Enlace del Archivo"
+                    />
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <hr />
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div
+                      class="card-header"
+                      id="headingOne"
+                      style="background-color: #8f141b"
+                    >
+                      <div class="row">
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                        <div class="col">
+                          <h2 class="mb-0">
+                            <button
+                              id="bt"
+                              class="btn btn-link navlinkin font-weight-bold text-uppercase"
+                              type="button"
+                            >
+                              Aspectos
+                            </button>
+                          </h2>
+                        </div>
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          1). Acto administrativo con el que se creó el programa
+                          y el órgano interno de dirección que aprobó dicha
+                          creación.
+                        </h6>
+                        <br />
+                        <textarea
+                          id="pregunta11"
+                          name="aspecto1Programa"
+                          [(ngModel)]="condicion1.aspecto1Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <label class="file-label">
+                              <input
+                                type="file"
+                                class="custom-file-input"
+                                formControlName="archivo1"
+                                id="customFileLang"
+                                lang="es"
+                                required
+                              />
+                              <span class="file-cta">
+                                <span
+                                  class="custom-file-label text-left inputPaciente"
+                                  style="margin-left: 16px"
+                                  for="customFileLang"
+                                >
+                                </span>
+                              </span>
+                            </label>
+                            <br />
+                          </div>
+                          <div class="col text-left">
+                            <button
+                              class="btn navlinkin"
+                              ngbTooltip="Subir archivo"
+                              tooltipClass="my-custom-class"
+                              type="submit"
+                            >
+                              <i class="fas fa-upload"></i>
+                            </button>
+                            <a
+                              target="_blank"
+                              class="btn navlinkin"
+                              style="margin-left: 5px"
+                              ><i class="far fa-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          2). Áreas de formación del programa presentado y la
+                          articulación con el alcance de la denominación.
+                        </h6>
+                        <br />
+                        <textarea
+                          [(ngModel)]="condicion1.aspecto2Programa"
+                          name="aspecto2Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <label class="file-label">
+                              <input
+                                type="file"
+                                class="custom-file-input"
+                                formControlName="archivo1"
+                                id="customFileLang"
+                                lang="es"
+                                required
+                              />
+                              <span class="file-cta">
+                                <span
+                                  class="custom-file-label text-left inputPaciente"
+                                  style="margin-left: 16px"
+                                  for="customFileLang"
+                                >
+                                </span>
+                              </span>
+                            </label>
+                            <br />
+                          </div>
+                          <div class="col text-left">
+                            <button
+                              class="btn navlinkin"
+                              ngbTooltip="Subir archivo"
+                              tooltipClass="my-custom-class"
+                              type="submit"
+                            >
+                              <i class="fas fa-upload"></i>
+                            </button>
+                            <a
+                              target="_blank"
+                              class="btn navlinkin"
+                              style="margin-left: 5px"
+                              ><i class="far fa-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          3). Soporte del alcance, la especificidad de la
+                          denominación y explicación de coherencia entre la
+                          denominación, el campo de conocimiento y el nivel de
+                          formación.
+                        </h6>
+                        <br />
+                        <textarea
+                          name="aspecto3Programa"
+                          [(ngModel)]="condicion1.aspecto3Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <label class="file-label">
+                              <input
+                                type="file"
+                                class="custom-file-input"
+                                formControlName="archivo1"
+                                id="customFileLang"
+                                lang="es"
+                                required
+                              />
+                              <span class="file-cta">
+                                <span
+                                  class="custom-file-label text-left inputPaciente"
+                                  style="margin-left: 16px"
+                                  for="customFileLang"
+                                >
+                                </span>
+                              </span>
+                            </label>
+                            <br />
+                          </div>
+                          <div class="col text-left">
+                            <button
+                              class="btn navlinkin"
+                              ngbTooltip="Subir archivo"
+                              tooltipClass="my-custom-class"
+                              type="submit"
+                            >
+                              <i class="fas fa-upload"></i>
+                            </button>
+                            <a
+                              target="_blank"
+                              class="btn navlinkin"
+                              style="margin-left: 5px"
+                              ><i class="far fa-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          4). Argumentos que la IES presenta para justificar la
+                          articulación entre la denominación del título y la del
+                          programa.
+                        </h6>
+                        <br />
+                        <textarea
+                          name="aspecto4Programa"
+                          [(ngModel)]="condicion1.aspecto4Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <label class="file-label">
+                              <input
+                                type="file"
+                                class="custom-file-input"
+                                formControlName="archivo1"
+                                id="customFileLang"
+                                lang="es"
+                                required
+                              />
+                              <span class="file-cta">
+                                <span
+                                  class="custom-file-label text-left inputPaciente"
+                                  style="margin-left: 16px"
+                                  for="customFileLang"
+                                >
+                                </span>
+                              </span>
+                            </label>
+                            <br />
+                          </div>
+                          <div class="col text-left">
+                            <button
+                              class="btn navlinkin"
+                              ngbTooltip="Subir archivo"
+                              tooltipClass="my-custom-class"
+                              type="submit"
+                            >
+                              <i class="fas fa-upload"></i>
+                            </button>
+                            <a
+                              target="_blank"
+                              class="btn navlinkin"
+                              style="margin-left: 5px"
+                              ><i class="far fa-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
+          </form>
+          <form #forma="ngForm">
+            <button
+              (click)="openModal(confirmar)"
+              class="btn navlinkinSolid m-2"
+            >
+              <i class="far fa-save"></i> Guardar
+            </button>
+            <a
+              href="https://console.firebase.google.com/u/4/project/saces-dcs-usco/storage/saces-dcs-usco.appspot.com/files"
+              target="_blank"
+              ><button class="btn navlinkinSolid m-2">
+                <i class="fas fa-upload"></i> Cargar imagen
+              </button></a
+            >
+            <a [routerLink]="['/home']"
+              ><button class="btn navlinkinSolid m-2">
+                <i class="fas fa-sign-out-alt"></i> Regresar
+              </button></a
+            >
+            <ng-template #confirmar let-modal>
+              <div class="modal-header bgrojoycafe">
+                <h4 class="modal-title">Confirmar acción</h4>
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <i class="fas fa-times" style="color: white"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div
+                  class="alert alert-warning text-center font-weight-bold"
+                  role="alert"
+                >
+                  Está a punto de guardar el evento. <br />
+                  ¿Desea continuar con la acción?
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btnColorFacultadSalud"
+                  ngbAutofocus
+                  (click)="guardar()"
+                >
+                  Aceptar
+                </button>
+                <button
+                  type="button"
+                  class="btn navlinkinSolid"
+                  (click)="modal.close('Close click')"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </ng-template>
+            <br />
+            <div
+              *ngIf="error != false"
+              class="alert alert-danger alert-dismissible fade show"
+              role="alert"
+            >
+              <strong>{{ passError }}</strong>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
