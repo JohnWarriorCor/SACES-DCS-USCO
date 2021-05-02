@@ -80,6 +80,14 @@ import { AgendaprogramaeditComponent } from './components/admin/agendaedit/agend
 import { AgendainstitucionaleditComponent } from './components/admin/agendaedit/agendainstitucionaledit/agendainstitucionaledit.component';
 import { Condicion1Component } from './components/pages/condicion1/condicion1.component';
 import { Condicion1editComponent } from './components/admin/condicion1edit/condicion1edit.component';
+import { Condicion2Component } from './components/pages/condicion2/condicion2.component';
+import { Condicion3Component } from './components/pages/condicion3/condicion3.component';
+import { Condicion4Component } from './components/pages/condicion4/condicion4.component';
+import { Condicion5Component } from './components/pages/condicion5/condicion5.component';
+import { Condicion6Component } from './components/pages/condicion6/condicion6.component';
+import { Condicion7Component } from './components/pages/condicion7/condicion7.component';
+import { Condicion8Component } from './components/pages/condicion8/condicion8.component';
+import { Condicion9Component } from './components/pages/condicion9/condicion9.component';
 
 // registrar los locales con el nombre que quieras utilizar a la hora de proveer
 registerLocaleData(localeEsCO, 'es-CO');
@@ -137,6 +145,14 @@ registerLocaleData(localeEsCO, 'es-CO');
     AgendainstitucionaleditComponent,
     Condicion1Component,
     Condicion1editComponent,
+    Condicion2Component,
+    Condicion3Component,
+    Condicion4Component,
+    Condicion5Component,
+    Condicion6Component,
+    Condicion7Component,
+    Condicion8Component,
+    Condicion9Component,
   ],
   imports: [
     BrowserModule,

@@ -43,12 +43,36 @@ import { AgendaprogramaeditComponent } from './components/admin/agendaedit/agend
 import { AgendainstitucionaleditComponent } from './components/admin/agendaedit/agendainstitucionaledit/agendainstitucionaledit.component';
 import { Condicion1editComponent } from './components/admin/condicion1edit/condicion1edit.component';
 import { Condicion1Component } from './components/pages/condicion1/condicion1.component';
+import { Condicion2Component } from './components/pages/condicion2/condicion2.component';
+import { Condicion3Component } from './components/pages/condicion3/condicion3.component';
+import { Condicion4Component } from './components/pages/condicion4/condicion4.component';
+import { Condicion5Component } from './components/pages/condicion5/condicion5.component';
+import { Condicion6Component } from './components/pages/condicion6/condicion6.component';
+import { Condicion7Component } from './components/pages/condicion7/condicion7.component';
+import { Condicion8Component } from './components/pages/condicion8/condicion8.component';
+import { Condicion9Component } from './components/pages/condicion9/condicion9.component';
 
 const routes: Routes = [
   // INICIO
   { path: 'inicio', component: HomeComponent },
   // CONDICIÓN 1
   { path: 'Denominacion_academica_del_programa', component: Condicion1Component },
+  // CONDICIÓN 2
+  { path: 'Justificacion_del_programa', component: Condicion2Component },
+  // CONDICIÓN 3
+  { path: 'Aspectos_curriculares', component: Condicion3Component },
+  // CONDICIÓN 4
+  { path: 'Organizacion_de_las_actividades_academicas_y_proceso_formativo', component: Condicion4Component },
+  // CONDICIÓN 5
+  { path: 'Investigacion_innovacion_y_creación_artistica_y_cultural', component: Condicion5Component },
+  // CONDICIÓN 6
+  { path: 'Relacion_con_el_sector_externo', component: Condicion6Component },
+  // CONDICIÓN 7
+  { path: 'Profesores', component: Condicion7Component },
+  // CONDICIÓN 8
+  { path: 'Medios_educativos', component: Condicion8Component },
+  // CONDICIÓN 9
+  { path: 'Infraestructura_fisica_y_tecnologica', component: Condicion9Component },
   // PROGRAMA
   { path: 'programa', component: ProgramaComponent },
   { path: 'historia', component: HistoriaComponent },
