@@ -154,6 +154,9 @@ html {
   font-weight: bold;
   margin-bottom: 20px;
 }
+.ocre-text {
+  color: #DFD4A6;
+}
 
 ngb-pagination ::ng-deep ul > li:not(.active) > a {
   background-color: #8f141b !important;

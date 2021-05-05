@@ -9,116 +9,211 @@
           <hr class="lineInstRed" />
           <br />
           <section *ngFor="let item of condicion1; let i = index">
-            <table class="table table-bordered parinst">
-              <thead class="tablatit text-center">
-                <tr>
-                  <th colspan="2" scope="col">
-                    Tabla 1 Denominación académica del programa
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Nombre del Programa:</th>
-                  <td>{{ item.nombrePrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Titulo a otorgar:</th>
-                  <td>{{ item.tituloOtorgaPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Nivel Académico:</th>
-                  <td>{{ item.nivelAcademicoPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Nivel Formación:</th>
-                  <td>{{ item.nivelFormacionPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Área del Conocimiento:</th>
-                  <td>{{ item.areaConocimientoPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Localización del Programa:</th>
-                  <td>{{ item.localizacionPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Dirección:</th>
-                  <td>{{ item.direccionPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Teléfono:</th>
-                  <td>{{ item.telefonoPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Fax:</th>
-                  <td>{{ item.faxPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Página Web institucional:</th>
-                  <td>
-                    <a [href]="item.webPrograma" target="_blank">{{
-                      item.webPrograma
-                    }}</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th>E Mail:</th>
-                  <td>{{ item.emailPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Entidad oferente:</th>
-                  <td>{{ item.entidadOferentePrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Metodología:</th>
-                  <td>{{ item.emailPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Número de créditos:</th>
-                  <td>{{ item.creditosPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Duración:</th>
-                  <td>{{ item.duracionPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Número de estudiantes:</th>
-                  <td>{{ item.estudiantesPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Periodicidad de admisiones:</th>
-                  <td>{{ item.admisionPrograma }}</td>
-                </tr>
-                <tr>
-                  <th>Costo de matrícula semestral:</th>
-                  <td>
-                    <a [href]="item.urlCostoPrograma" target="_blank">{{
-                      item.costoPrograma
-                    }}</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Norma interna de creación del Programa:</th>
-                  <td>
-                    <a [href]="item.urlNormaPrograma" target="_blank">{{
-                      item.normaPrograma
-                    }}</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    Registro Calificado Otorgado por el Ministerio de Educación
-                    Nacional:
-                  </th>
-                  <td>
-                    <a [href]="item.urlRegsitroPrograma" target="_blank">{{
-                      item.regsitroPrograma
-                    }}</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-bordered parinst">
+                <thead class="tablatit text-center">
+                  <tr>
+                    <th colspan="2" scope="col">
+                      Tabla 1 Denominación académica del programa
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Nombre del Programa:</th>
+                    <td>{{ item.nombrePrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Titulo a otorgar:</th>
+                    <td>{{ item.tituloOtorgaPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Nivel Académico:</th>
+                    <td>{{ item.nivelAcademicoPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Nivel Formación:</th>
+                    <td>{{ item.nivelFormacionPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Área del Conocimiento:</th>
+                    <td>{{ item.areaConocimientoPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Localización del Programa:</th>
+                    <td>{{ item.localizacionPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Dirección:</th>
+                    <td>{{ item.direccionPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Teléfono:</th>
+                    <td>{{ item.telefonoPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Fax:</th>
+                    <td>{{ item.faxPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Página Web institucional:</th>
+                    <td>
+                      <a [href]="item.webPrograma" target="_blank">{{
+                        item.webPrograma
+                      }}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>E Mail:</th>
+                    <td>{{ item.emailPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Entidad oferente:</th>
+                    <td>{{ item.entidadOferentePrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Metodología:</th>
+                    <td>{{ item.emailPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Número de créditos:</th>
+                    <td>{{ item.creditosPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Duración:</th>
+                    <td>{{ item.duracionPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Número de estudiantes:</th>
+                    <td>{{ item.estudiantesPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Periodicidad de admisiones:</th>
+                    <td>{{ item.admisionPrograma }}</td>
+                  </tr>
+                  <tr>
+                    <th>Costo de matrícula semestral:</th>
+                    <td>
+                      <a [href]="item.urlCostoPrograma" target="_blank">{{
+                        item.costoPrograma
+                      }}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Norma interna de creación del Programa:</th>
+                    <td>
+                      <a [href]="item.urlNormaPrograma" target="_blank">{{
+                        item.normaPrograma
+                      }}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Registro Calificado Otorgado por el Ministerio de
+                      Educación Nacional:
+                    </th>
+                    <td>
+                      <a [href]="item.urlRegsitroPrograma" target="_blank">{{
+                        item.regsitroPrograma
+                      }}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col">
+                <hr />
+                <div class="accordion text-center" id="accordionExample">
+                  <div class="card">
+                    <div
+                      class="card-header"
+                      id="headingOne"
+                      style="background-color: #8f141b"
+                    >
+                      <div class="row">
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                        <div class="col">
+                          <h5 class="ocre-text">
+                            Aspectos
+                          </h5>
+                        </div>
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          1). Acto administrativo con el que se creó el programa
+                          y el órgano interno de dirección que aprobó dicha
+                          creación.
+                        </h6>
+                        <br />
+                        <p>
+                          {{ item.aspecto1Programa }}
+                        </p>
+                        <br />
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          2). Áreas de formación del programa presentado y la
+                          articulación con el alcance de la denominación.
+                        </h6>
+                        <br />
+                        <p>
+                          {{ item.aspecto2Programa }}
+                        </p>
+                        <br />
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          3). Soporte del alcance, la especificidad de la
+                          denominación y explicación de coherencia entre la
+                          denominación, el campo de conocimiento y el nivel de
+                          formación.
+                        </h6>
+                        <br />
+                        <p>
+                          {{ item.aspecto3Programa }}
+                        </p>
+                        <br />
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          4). Argumentos que la IES presenta para justificar la
+                          articulación entre la denominación del título y la del
+                          programa.
+                        </h6>
+                        <br />
+                        <p>
+                          {{ item.aspecto4Programa }}
+                        </p>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
             <br />
             <div class="row" *ngIf="auth.user | async">
               <div class="col text-right">
