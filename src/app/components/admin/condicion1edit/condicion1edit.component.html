@@ -239,13 +239,71 @@
                   </div>
                   <div class="col">
                     <h6 class="text-left subTituloRojoInstitucional">URL:</h6>
-                    <input
-                      type="text"
-                      name="urlCostoPrograma"
-                      [(ngModel)]="condicion1.urlCostoPrograma"
-                      class="form-control shadow p-3 inputPaciente"
-                      placeholder="Enlace del Archivo"
-                    />
+                    <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
+                      <div class="row">
+                        <div
+                          *ngIf="porcentaje > 1 && porcentaje < 101"
+                          class="col"
+                        >
+                          <ngb-progressbar
+                            [showValue]="true"
+                            type="danger"
+                            [value]="porcentaje"
+                          >
+                          </ngb-progressbar
+                          ><br />
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8">
+                          <label class="file-label">
+                            <input
+                              type="file"
+                              class="custom-file-input"
+                              formControlName="archivo"
+                              (change)="cambioArchivo($event)"
+                              id="customFileLang"
+                              lang="es"
+                              required
+                            />
+                            <span class="file-cta">
+                              <span
+                                class="custom-file-label text-left inputPaciente"
+                                style="margin-left: 16px"
+                                for="customFileLang"
+                              >
+                                {{ mensajeArchivo }}
+                              </span>
+                            </span>
+                          </label>
+                          <h5
+                            *ngIf="porcentaje === 100"
+                            class="alert-primary text-center"
+                          >
+                            Archivo cargado exitosamente
+                          </h5>
+                          <br />
+                        </div>
+                        <div class="col-4 text-left">
+                          <button
+                            class="btn navlinkin"
+                            type="submit"
+                            [disabled]="!archivoForm.valid"
+                          >
+                            <i class="fas fa-upload"></i>
+                          </button>
+                          <a
+                            href="{{ URLPublica }}"
+                            target="_blank"
+                            class="btn navlinkin"
+                            *ngIf="finalizado"
+                            style="margin-left: 5px"
+                            ><i class="far fa-eye"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
                 <div class="row">
@@ -263,13 +321,71 @@
                   </div>
                   <div class="col">
                     <h6 class="text-left subTituloRojoInstitucional">URL:</h6>
-                    <input
-                      type="text"
-                      name="urlNormaPrograma"
-                      [(ngModel)]="condicion1.urlNormaPrograma"
-                      class="form-control shadow p-3 inputPaciente"
-                      placeholder="Archivo y nombre"
-                    />
+                    <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
+                      <div class="row">
+                        <div
+                          *ngIf="porcentaje > 1 && porcentaje < 101"
+                          class="col"
+                        >
+                          <ngb-progressbar
+                            [showValue]="true"
+                            type="danger"
+                            [value]="porcentaje"
+                          >
+                          </ngb-progressbar
+                          ><br />
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8">
+                          <label class="file-label">
+                            <input
+                              type="file"
+                              class="custom-file-input"
+                              formControlName="archivo"
+                              (change)="cambioArchivo($event)"
+                              id="customFileLang"
+                              lang="es"
+                              required
+                            />
+                            <span class="file-cta">
+                              <span
+                                class="custom-file-label text-left inputPaciente"
+                                style="margin-left: 16px"
+                                for="customFileLang"
+                              >
+                                {{ mensajeArchivo }}
+                              </span>
+                            </span>
+                          </label>
+                          <h5
+                            *ngIf="porcentaje === 100"
+                            class="alert-primary text-center"
+                          >
+                            Archivo cargado exitosamente
+                          </h5>
+                          <br />
+                        </div>
+                        <div class="col-4 text-left">
+                          <button
+                            class="btn navlinkin"
+                            type="submit"
+                            [disabled]="!archivoForm.valid"
+                          >
+                            <i class="fas fa-upload"></i>
+                          </button>
+                          <a
+                            href="{{ URLPublica }}"
+                            target="_blank"
+                            class="btn navlinkin"
+                            *ngIf="finalizado"
+                            style="margin-left: 5px"
+                            ><i class="far fa-eye"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
                 <div class="row">
@@ -288,13 +404,71 @@
                   </div>
                   <div class="col">
                     <h6 class="text-left subTituloRojoInstitucional">ULR:</h6>
-                    <input
-                      type="text"
-                      name="urlRegsitroPrograma"
-                      [(ngModel)]="condicion1.urlRegsitroPrograma"
-                      class="form-control shadow p-3 inputPaciente"
-                      placeholder="Enlace del Archivo"
-                    />
+                    <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
+                      <div class="row">
+                        <div
+                          *ngIf="porcentaje > 1 && porcentaje < 101"
+                          class="col"
+                        >
+                          <ngb-progressbar
+                            [showValue]="true"
+                            type="danger"
+                            [value]="porcentaje"
+                          >
+                          </ngb-progressbar
+                          ><br />
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8">
+                          <label class="file-label">
+                            <input
+                              type="file"
+                              class="custom-file-input"
+                              formControlName="archivo"
+                              (change)="cambioArchivo($event)"
+                              id="customFileLang"
+                              lang="es"
+                              required
+                            />
+                            <span class="file-cta">
+                              <span
+                                class="custom-file-label text-left inputPaciente"
+                                style="margin-left: 16px"
+                                for="customFileLang"
+                              >
+                                {{ mensajeArchivo }}
+                              </span>
+                            </span>
+                          </label>
+                          <h5
+                            *ngIf="porcentaje === 100"
+                            class="alert-primary text-center"
+                          >
+                            Archivo cargado exitosamente
+                          </h5>
+                          <br />
+                        </div>
+                        <div class="col-4 text-left">
+                          <button
+                            class="btn navlinkin"
+                            type="submit"
+                            [disabled]="!archivoForm.valid"
+                          >
+                            <i class="fas fa-upload"></i>
+                          </button>
+                          <a
+                            href="{{ URLPublica }}"
+                            target="_blank"
+                            class="btn navlinkin"
+                            *ngIf="finalizado"
+                            style="margin-left: 5px"
+                            ><i class="far fa-eye"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
                 <br />
@@ -362,41 +536,74 @@
                         <br />
                         <div class="row">
                           <div class="col">
-                            <label class="file-label">
-                              <input
-                                type="file"
-                                class="custom-file-input"
-                                formControlName="archivo1"
-                                id="customFileLang"
-                                lang="es"
-                                required
-                              />
-                              <span class="file-cta">
-                                <span
-                                  class="custom-file-label text-left inputPaciente"
-                                  style="margin-left: 16px"
-                                  for="customFileLang"
-                                >
-                                </span>
-                              </span>
-                            </label>
-                            <br />
-                          </div>
-                          <div class="col text-left">
-                            <button
-                              class="btn navlinkin"
-                              ngbTooltip="Subir archivo"
-                              tooltipClass="my-custom-class"
-                              type="submit"
+                            <form
+                              [formGroup]="archivoForm"
+                              (ngSubmit)="subirArchivo()"
                             >
-                              <i class="fas fa-upload"></i>
-                            </button>
-                            <a
-                              target="_blank"
-                              class="btn navlinkin"
-                              style="margin-left: 5px"
-                              ><i class="far fa-eye"></i
-                            ></a>
+                              <div class="row">
+                                <div
+                                  *ngIf="porcentaje > 1 && porcentaje < 101"
+                                  class="col"
+                                >
+                                  <ngb-progressbar
+                                    [showValue]="true"
+                                    type="danger"
+                                    [value]="porcentaje"
+                                  >
+                                  </ngb-progressbar
+                                  ><br />
+                                </div>
+                                <div class="col"></div>
+                              </div>
+                              <div class="row">
+                                <div class="col-8">
+                                  <label class="file-label">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      formControlName="archivo"
+                                      (change)="cambioArchivo($event)"
+                                      id="customFileLang"
+                                      lang="es"
+                                      required
+                                    />
+                                    <span class="file-cta">
+                                      <span
+                                        class="custom-file-label text-left inputPaciente"
+                                        style="margin-left: 16px"
+                                        for="customFileLang"
+                                      >
+                                        {{ mensajeArchivo }}
+                                      </span>
+                                    </span>
+                                  </label>
+                                  <h5
+                                    *ngIf="porcentaje === 100"
+                                    class="alert-primary text-center"
+                                  >
+                                    Archivo cargado exitosamente
+                                  </h5>
+                                  <br />
+                                </div>
+                                <div class="col-4 text-left">
+                                  <button
+                                    class="btn navlinkin"
+                                    type="submit"
+                                    [disabled]="!archivoForm.valid"
+                                  >
+                                    <i class="fas fa-upload"></i>
+                                  </button>
+                                  <a
+                                    href="{{ URLPublica }}"
+                                    target="_blank"
+                                    class="btn navlinkin"
+                                    *ngIf="finalizado"
+                                    style="margin-left: 5px"
+                                    ><i class="far fa-eye"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </form>
                           </div>
                         </div>
                         <br />
@@ -414,45 +621,7 @@
                           rows="3"
                         ></textarea>
                         <br />
-                        <div class="row">
-                          <div class="col">
-                            <label class="file-label">
-                              <input
-                                type="file"
-                                class="custom-file-input"
-                                formControlName="archivo1"
-                                id="customFileLang"
-                                lang="es"
-                                required
-                              />
-                              <span class="file-cta">
-                                <span
-                                  class="custom-file-label text-left inputPaciente"
-                                  style="margin-left: 16px"
-                                  for="customFileLang"
-                                >
-                                </span>
-                              </span>
-                            </label>
-                            <br />
-                          </div>
-                          <div class="col text-left">
-                            <button
-                              class="btn navlinkin"
-                              ngbTooltip="Subir archivo"
-                              tooltipClass="my-custom-class"
-                              type="submit"
-                            >
-                              <i class="fas fa-upload"></i>
-                            </button>
-                            <a
-                              target="_blank"
-                              class="btn navlinkin"
-                              style="margin-left: 5px"
-                              ><i class="far fa-eye"></i
-                            ></a>
-                          </div>
-                        </div>
+                        <div class="row"></div>
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
@@ -470,45 +639,7 @@
                           rows="3"
                         ></textarea>
                         <br />
-                        <div class="row">
-                          <div class="col">
-                            <label class="file-label">
-                              <input
-                                type="file"
-                                class="custom-file-input"
-                                formControlName="archivo1"
-                                id="customFileLang"
-                                lang="es"
-                                required
-                              />
-                              <span class="file-cta">
-                                <span
-                                  class="custom-file-label text-left inputPaciente"
-                                  style="margin-left: 16px"
-                                  for="customFileLang"
-                                >
-                                </span>
-                              </span>
-                            </label>
-                            <br />
-                          </div>
-                          <div class="col text-left">
-                            <button
-                              class="btn navlinkin"
-                              ngbTooltip="Subir archivo"
-                              tooltipClass="my-custom-class"
-                              type="submit"
-                            >
-                              <i class="fas fa-upload"></i>
-                            </button>
-                            <a
-                              target="_blank"
-                              class="btn navlinkin"
-                              style="margin-left: 5px"
-                              ><i class="far fa-eye"></i
-                            ></a>
-                          </div>
-                        </div>
+                        <div class="row"></div>
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
@@ -525,45 +656,7 @@
                           rows="3"
                         ></textarea>
                         <br />
-                        <div class="row">
-                          <div class="col">
-                            <label class="file-label">
-                              <input
-                                type="file"
-                                class="custom-file-input"
-                                formControlName="archivo1"
-                                id="customFileLang"
-                                lang="es"
-                                required
-                              />
-                              <span class="file-cta">
-                                <span
-                                  class="custom-file-label text-left inputPaciente"
-                                  style="margin-left: 16px"
-                                  for="customFileLang"
-                                >
-                                </span>
-                              </span>
-                            </label>
-                            <br />
-                          </div>
-                          <div class="col text-left">
-                            <button
-                              class="btn navlinkin"
-                              ngbTooltip="Subir archivo"
-                              tooltipClass="my-custom-class"
-                              type="submit"
-                            >
-                              <i class="fas fa-upload"></i>
-                            </button>
-                            <a
-                              target="_blank"
-                              class="btn navlinkin"
-                              style="margin-left: 5px"
-                              ><i class="far fa-eye"></i
-                            ></a>
-                          </div>
-                        </div>
+                        <div class="row"></div>
                       </div>
                     </div>
                   </div>

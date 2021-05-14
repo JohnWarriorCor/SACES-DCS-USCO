@@ -7,6 +7,7 @@ import { Listado } from '../../../interfaces/estudiantes/listado/listado';
   providedIn: 'root'
 })
 export class ListadoService {
+
   listadoRegistroURL = 'https://doctoradocienciasdelasaludusco.firebaseio.com/listadoEstudiantes.json';
   listadoURL = 'https://doctoradocienciasdelasaludusco.firebaseio.com/listadoEstudiantes/';
 

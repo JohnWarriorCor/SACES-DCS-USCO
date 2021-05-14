@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
@@ -10,7 +10,6 @@ import 'firebase/auth';
   selector: 'app-planestudios',
   templateUrl: './planestudios.component.html',
   styleUrls: ['./planestudios.component.css'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class PlanestudiosComponent implements OnInit {
   closeResult: string;

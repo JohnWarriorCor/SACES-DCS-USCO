@@ -23,6 +23,7 @@ export interface Condicion1 {
     regsitroPrograma: string;
     urlRegsitroPrograma: string;
     aspecto1Programa: string;
+    aspecto1File: string;
     aspecto2Programa: string;
     aspecto3Programa: string;
     aspecto4Programa: string;
