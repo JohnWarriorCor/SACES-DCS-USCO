@@ -1,154 +1,142 @@
-<div class="container">
-  <hr />
-  <div class="fondodivlogin">
+<div class="fondodivlogin">
+  <div
+    class="card text-center"
+    *ngIf="ajustes != false"
+    style="border-radius: 12px"
+  >
     <div
-      class="card text-center"
-      *ngIf="ajustes != false"
-      style="border-radius: 12px"
+      class="card-header"
+      style="
+        background-color: #8f141b;
+        color: white;
+        border-radius: 12px 12px 0 0;
+      "
     >
-      <div
-        class="card-header"
-        style="
-          background-color: #8f141b;
-          color: white;
-          border-radius: 12px 12px 0 0;
-        "
-      >
-        <p class="h4">Administrar contenidos:</p>
-      </div>
-      <div class="card-body">
-        <form class="text-center p-5" #forma="ngForm">
-          <!-- Email -->
-          <div class="d-flex justify-content-around">
-            <i class="fas fa-user-cog fa-2x grayinst" style="margin: 5px"></i>
-            <input
-              [(ngModel)]="user"
-              name="user"
-              type="text"
-              id="defaultLoginFormEmail"
-              class="form-control mb-4"
-              placeholder="Usuario"
-            />
-          </div>
+      <p class="h4">Administrar contenidos:</p>
+    </div>
+    <div class="card-body">
+      <form class="text-center p-2" #forma="ngForm">
+        <!-- Email -->
+        <div class="d-flex justify-content-around">
+          <input
+            type="email"
+            id="defaultLoginFormEmail"
+            [(ngModel)]="email"
+            name="email"
+            class="form-control mb-4 shadow"
+            placeholder="Correo"
+          />
+        </div>
 
-          <!-- Password -->
-          <div class="d-flex justify-content-around">
-            <i class="fas fa-key fa-2x grayinst" style="margin: 5px"></i>
+        <!-- Password -->
+        <div class="d-flex justify-content-around" *ngIf="viewPass != true">
+          <div class="input-group mb-3">
             <input
-              [(ngModel)]="key"
-              name="key"
+              [(ngModel)]="pass"
+              name="pass"
               type="password"
-              id="defaultLoginFormPassword"
-              class="form-control mb-4"
+              class="form-control shadow"
               placeholder="Contraseña"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              (keyup.enter)="customLogin()"
             />
+            <div class="input-group-append">
+              <button
+                placement="top"
+                ngbTooltip="Ver contraseña"
+                class="btn navlinkinSolid shadow"
+                type="button"
+                id="button-addon2"
+                (click)="view()"
+              >
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
           </div>
+        </div>
+        <!-- Password view-->
+        <div class="d-flex justify-content-around" *ngIf="hidePass != true">
+          <div class="input-group mb-3">
+            <input
+              [(ngModel)]="pass"
+              name="pass"
+              type="text"
+              class="form-control shadow"
+              placeholder="Contraseña"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              (keyup.enter)="customLogin()"
+            />
+            <div class="input-group-append">
+              <button
+                placement="top"
+                ngbTooltip="Ocultar contraseña"
+                class="btn navlinkinSolid shadow"
+                type="button"
+                id="button-addon2"
+                (click)="hide()"
+              >
+                <i class="far fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-          <div class="d-flex justify-content-around">
-            <div>
-              <!-- Remember me -->
-              <mdb-checkbox [default]="true">Recuerdame</mdb-checkbox>
-            </div>
-            <div>
-              <!-- Forgot password -->
-              <a href="">¿Recuperar?</a>
-            </div>
-          </div>
-          <div
-            *ngIf="error != false"
-            class="alert alert-danger alert-dismissible fade show"
-            role="alert"
-          >
-            <strong>{{ passError }}</strong>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
+        <div class="justify-content-around">
+          <div class="m-2">
+            <!-- Forgot password -->
+            <a (click)="recuperar()" class="cursorSelect text-blue"
+              >¿Recuperar?</a
             >
-              <i class="fas fa-times" style="color: #8f141b"></i>
-            </button>
           </div>
-          <!-- Sign in button -->
-          <button
-            (click)="viewOpciones(key, user)"
-            class="btn navlinkinSolid my-4"
-            style="width: 100%"
-            type="submit"
-          >
-            Acceder
-          </button>
-
-          <!-- Register 
-          <p>Not a member?
-            <a href="">Register</a>
-          </p>-->
-        </form>
-      </div>
-      <!--<div class="card-footer text-muted">
-        2 days ago
-      </div>-->
+          <div class="input-group mb-3" *ngIf="viewRecuperar != true">
+            <input
+              class="form-control shadow"
+              placeholder="Correo"
+              type="email"
+              id="defaultLoginFormEmail"
+              [(ngModel)]="email"
+              name="email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              (keyup.enter)="passEmail()"
+            />
+            <div class="input-group-append">
+              <button
+                placement="top"
+                ngbTooltip="Enviar al correo"
+                class="btn navlinkinSolid shadow"
+                type="button"
+                id="button-addon2"
+                (click)="passEmail()"
+              >
+                <i class="far fa-paper-plane"></i>
+              </button>
+            </div>
+            <small class="m-2"
+              >Digite su correo para enviar un email y recuperar su
+              contraseña</small
+            >
+          </div>
+        </div>
+      </form>
+      <hr />
+      <button
+        type="button"
+        style="
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+        "
+        class="btn navlinkinSolid p-3"
+        ngbAutofocus
+        (click)="customLogin()"
+      >
+        Acceder
+      </button>
     </div>
   </div>
-  <div class="row" *ngIf="vistaEdicion != false">
-    <div class="col">
-      <div
-        class="card text-center cursorSelect"
-        [routerLink]="['/admi_carrusel']"
-        style="border-radius: 12px"
-      >
-        <div
-          class="card-header"
-          style="
-            background-color: #8f141b;
-            color: white;
-            border-radius: 12px 12px 0 0;
-          "
-        >
-          <p class="h4">Administrar carrusel de imágenes</p>
-        </div>
-        <div class="card-body">
-          <img
-            src="assets/carrusel.png"
-            class="rounded mx-auto d-block"
-            style="width: 100%"
-            alt=""
-          />
-        </div>
-        <!--<div class="card-footer text-muted">
-          2 days ago
-        </div>-->
-      </div>
-    </div>
-    <div class="col">
-      <div
-        class="card text-center cursorSelect"
-        [routerLink]="['/admi_denominacion/', keyFireBase]"
-        style="border-radius: 12px"
-      >
-        <div
-          class="card-header"
-          style="
-            background-color: #8f141b;
-            color: white;
-            border-radius: 12px 12px 0 0;
-          "
-        >
-          <p class="h4">Administrar tabla denominación del programa</p>
-        </div>
-        <div class="card-body">
-          <img
-            src="assets/denominacion.png"
-            class="rounded mx-auto d-block"
-            style="width: 48%"
-            alt=""
-          />
-        </div>
-        <!--<div class="card-footer text-muted">
-          2 days ago
-        </div>-->
-      </div>
-    </div>
-  </div>
-  <hr />
 </div>
+<hr />

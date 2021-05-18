@@ -61,7 +61,7 @@
   </div>
 </div>
 <header class="header">
-  <nav class="navbar menu navbar-expand-lg menu bgCafeInstitu">
+  <nav class="navbar menu navbar-expand-lg menu bgCafeInstitu" *ngIf="auth.user | async">
     <button
       class="navbar-toggler navlinkin"
       type="button"

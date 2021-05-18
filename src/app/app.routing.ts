@@ -54,25 +54,25 @@ import { Condicion9Component } from './components/pages/condicion9/condicion9.co
 
 const routes: Routes = [
   // INICIO
-  { path: 'inicio', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent, canActivate: [AuthGuard] },
   // CONDICIÓN 1
-  { path: 'Denominacion_academica_del_programa', component: Condicion1Component },
+  { path: 'Denominacion_academica_del_programa', component: Condicion1Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 2
-  { path: 'Justificacion_del_programa', component: Condicion2Component },
+  { path: 'Justificacion_del_programa', component: Condicion2Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 3
-  { path: 'Aspectos_curriculares', component: Condicion3Component },
+  { path: 'Aspectos_curriculares', component: Condicion3Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 4
-  { path: 'Organizacion_de_las_actividades_academicas_y_proceso_formativo', component: Condicion4Component },
+  { path: 'Organizacion_de_las_actividades_academicas_y_proceso_formativo', component: Condicion4Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 5
-  { path: 'Investigacion_innovacion_y_creación_artistica_y_cultural', component: Condicion5Component },
+  { path: 'Investigacion_innovacion_y_creación_artistica_y_cultural', component: Condicion5Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 6
-  { path: 'Relacion_con_el_sector_externo', component: Condicion6Component },
+  { path: 'Relacion_con_el_sector_externo', component: Condicion6Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 7
-  { path: 'Profesores', component: Condicion7Component },
+  { path: 'Profesores', component: Condicion7Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 8
-  { path: 'Medios_educativos', component: Condicion8Component },
+  { path: 'Medios_educativos', component: Condicion8Component, canActivate: [AuthGuard]  },
   // CONDICIÓN 9
-  { path: 'Infraestructura_fisica_y_tecnologica', component: Condicion9Component },
+  { path: 'Infraestructura_fisica_y_tecnologica', component: Condicion9Component, canActivate: [AuthGuard]  },
   // PROGRAMA
   { path: 'programa', component: ProgramaComponent },
   { path: 'historia', component: HistoriaComponent },
@@ -111,7 +111,7 @@ const routes: Routes = [
 
 
   // RUTAS ADMINISTRADOR
-  { path: 'admi_login', component: LoginComponent },
+  { path: 'admi-login', component: LoginComponent },
   // CONDICION 1
   { path: 'admi_condicion1/:id', component: Condicion1editComponent, canActivate: [AuthGuard] },
   // INICIO

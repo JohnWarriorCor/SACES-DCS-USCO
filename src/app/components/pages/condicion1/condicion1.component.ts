@@ -12,7 +12,7 @@ import { TituloService } from '../../../services/titulo/titulodinamico.service';
   selector: 'app-condicion1',
   templateUrl: './condicion1.component.html',
   styleUrls: ['./condicion1.component.css'],
-  providers: [DatePipe]
+  providers: [DatePipe],
 })
 export class Condicion1Component implements OnInit {
   filterpost = '';
@@ -32,8 +32,15 @@ export class Condicion1Component implements OnInit {
   condicion1: any;
   actualEvento = null;
   actualIndex = -1;
-  constructor( private headerTitleService: TituloService, public datepipe: DatePipe, private toastr: ToastrService, public auth: AngularFireAuth, private condicion1Service: Condicion1Service, private modalService: NgbModal ) {
-    this.condicion1Service.getCondiciones1().subscribe( data => {
+  constructor(
+    private headerTitleService: TituloService,
+    public datepipe: DatePipe,
+    private toastr: ToastrService,
+    public auth: AngularFireAuth,
+    private condicion1Service: Condicion1Service,
+    private modalService: NgbModal
+  ) {
+    this.condicion1Service.getCondiciones1().subscribe((data) => {
       this.condicion1 = data;
     });
   }
@@ -45,13 +52,13 @@ export class Condicion1Component implements OnInit {
     });
   }
   elementoEliminado() {
-    this.toastr.warning( '', 'Elemento eliminado', {
-      timeOut: 2500
+    this.toastr.warning('', 'Elemento eliminado', {
+      timeOut: 2500,
     });
   }
   showDanger() {
     this.toastr.error('Intenten nuevamente', 'Error', {
-      timeOut: 2500
+      timeOut: 2500,
     });
   }
 
@@ -59,15 +66,24 @@ export class Condicion1Component implements OnInit {
     window.location.reload();
   }
   openModal(confirmar) {
-    this.modalReference = this.modalService.open(confirmar, { centered: true, size: 'sm', backdrop: 'static', windowClass: 'fade-in'});
+    this.modalReference = this.modalService.open(confirmar, {
+      centered: true,
+      size: 'sm',
+      backdrop: 'static',
+      windowClass: 'fade-in',
+    });
   }
   openSm(formAdmin) {
-    this.modalReference = this.modalService.open(formAdmin, { size: 'sm', centered: true, backdrop: 'static' });
+    this.modalReference = this.modalService.open(formAdmin, {
+      size: 'sm',
+      centered: true,
+      backdrop: 'static',
+    });
   }
 
   ngOnInit(): void {
     this.headerTitleService.setTitle('DENOMINACIÓN ACADÉMICA DEL PROGRAMA');
-    for (let index = 2016; index <= (new Date()).getFullYear(); index++) {
+    for (let index = 2016; index <= new Date().getFullYear(); index++) {
       this.anios.push(index.toString());
     }
     this.fecha = this.datepipe.transform(this.today, 'yyyy-mm-dd');
@@ -88,21 +104,22 @@ export class Condicion1Component implements OnInit {
   }
 
   obtenerEventos(): void {
-    this.condicion1Service.getAll().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ key: c.payload.key, ...c.payload.val() })
+    this.condicion1Service
+      .getAll()
+      .snapshotChanges()
+      .pipe(
+        map((changes) =>
+          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
         )
       )
-    ).subscribe(data => {
-      this.condicion1 = data;
-    });
+      .subscribe((data) => {
+        this.condicion1 = data;
+      });
   }
 
-
-  borrarAgenda( key$: string) {
-    this.condicion1Service.borrarCondicion1(key$).subscribe( respuesta => {
-      if ( respuesta ) {
+  borrarAgenda(key$: string) {
+    this.condicion1Service.borrarCondicion1(key$).subscribe((respuesta) => {
+      if (respuesta) {
         this.showDanger();
       } else {
         delete this.condicion1[key$];

@@ -11,7 +11,7 @@ import { TituloService } from '../../../services/titulo/titulodinamico.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   open = false;
@@ -24,37 +24,48 @@ export class HeaderComponent implements OnInit {
   comodinAcum = 0;
   viewRecuperar = true;
   viewPass = false;
-  hidePass =  true;
+  hidePass = true;
   email = '';
   pass = '';
   title = '';
 
   // tslint:disable-next-line:no-shadowed-variable
-  constructor( private headerTitleService: TituloService, private toastr: ToastrService, public toastService: ToastService, public auth: AngularFireAuth, private router: Router, private modalService: NgbModal, ) {
-  }
+  constructor(
+    private headerTitleService: TituloService,
+    private toastr: ToastrService,
+    public toastService: ToastService,
+    // tslint:disable-next-line:no-shadowed-variable
+    public auth: AngularFireAuth,
+    private router: Router,
+    private modalService: NgbModal
+  ) {}
   showSuccess() {
     this.toastr.success('Acceso exitoso', 'Bienvenido', {
-      timeOut: 2500
+      timeOut: 2500,
     });
   }
   showExit() {
     this.toastr.error('', 'Sesión cerrada', {
-      timeOut: 2500
+      timeOut: 2500,
     });
   }
   showInfo(email) {
-    this.toastr.info( email, 'Mensaje enviado al correo:', {
-      timeOut: 2500
+    this.toastr.info(email, 'Mensaje enviado al correo:', {
+      timeOut: 2500,
     });
   }
   showWarning() {
-    this.toastr.warning( 'Correo o contraseña incorrectos', 'Verifique las credenciales', {
-      timeOut: 2500
-    });
+    this.toastr.warning(
+      'Correo o contraseña incorrectos',
+      'Verifique las credenciales',
+      {
+        timeOut: 2500,
+      }
+    );
   }
   showWarningMail() {
-    this.toastr.warning( 'Correo no registrado', 'Verifique el correo escrito', {
-      timeOut: 2500
+    this.toastr.warning('Correo no registrado', 'Verifique el correo escrito', {
+      timeOut: 2500,
     });
   }
   recuperar() {
@@ -69,45 +80,57 @@ export class HeaderComponent implements OnInit {
     this.hidePass = true;
   }
   openSm(formAdmin) {
-    this.modalReference = this.modalService.open(formAdmin, { size: 'sm', centered: true, backdrop: 'static' });
+    this.modalReference = this.modalService.open(formAdmin, {
+      size: 'sm',
+      centered: true,
+      backdrop: 'static',
+    });
   }
   openModal(confirmar) {
-    this.modalReference = this.modalService.open(confirmar, { centered: true, size: 'sm', backdrop: 'static', windowClass: 'fade-in'});
+    this.modalReference = this.modalService.open(confirmar, {
+      centered: true,
+      size: 'sm',
+      backdrop: 'static',
+      windowClass: 'fade-in',
+    });
   }
   ngOnInit() {
-    this.headerTitleService.title.subscribe(updatedTitle => {
+    this.headerTitleService.title.subscribe((updatedTitle) => {
       this.title = updatedTitle;
     });
   }
   loginWith() {
     // tslint:disable-next-line:new-parens
-    this.auth.auth.signInWithPopup( new auth.GoogleAuthProvider );
+    this.auth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   logout() {
     this.auth.auth.signOut();
     this.showExit();
+    this.router.navigate(['/admi-login']);
   }
   showData() {
-    this.auth.user.subscribe( res => {
+    this.auth.user.subscribe((res) => {
       console.log(res);
     });
   }
   passEmail() {
-    this.auth.auth.sendPasswordResetEmail(this.email).then( res => {
-      console.log(res);
-      this.showInfo(this.email);
-      this.modalReference.close();
-    })
-    .catch(err => console.log('Error cl:', err, this.showWarningMail()));
+    this.auth.auth
+      .sendPasswordResetEmail(this.email)
+      .then((res) => {
+        console.log(res);
+        this.showInfo(this.email);
+        this.modalReference.close();
+      })
+      .catch((err) => console.log('Error cl:', err, this.showWarningMail()));
   }
   customLogin() {
-    this.auth.auth.signInWithEmailAndPassword(this.email, this.pass)
-    .then( res => {
-      console.log(res);
-      this.showSuccess();
-      this.modalReference.close();
-    })
-    .catch(err => console.log('Error cl:', err, this.showWarning()));
+    this.auth.auth
+      .signInWithEmailAndPassword(this.email, this.pass)
+      .then((res) => {
+        console.log(res);
+        this.showSuccess();
+        this.modalReference.close();
+      })
+      .catch((err) => console.log('Error cl:', err, this.showWarning()));
   }
-
 }
