@@ -113,8 +113,8 @@
                       Educación Nacional:
                     </th>
                     <td>
-                      <a [href]="item.urlRegsitroPrograma" target="_blank">{{
-                        item.regsitroPrograma
+                      <a [href]="item.urlRegistroPrograma" target="_blank">{{
+                        item.registroPrograma
                       }}</a>
                     </td>
                   </tr>
@@ -141,9 +141,7 @@
                           aria-controls="collapseOne"
                         ></div>
                         <div class="col">
-                          <h5 class="ocre-text">
-                            Aspectos
-                          </h5>
+                          <h5 class="ocre-text">Aspectos</h5>
                         </div>
                         <div
                           class="col"
@@ -170,6 +168,16 @@
                         <p>
                           {{ item.aspecto1Programa }}
                         </p>
+                        <a
+                          [href]="condicion1.aspecto2File"
+                          target="_blank"
+                          *ngIf="condicion1.aspecto2File"
+                          class="btn navlinkin"
+                          placement="top"
+                          ngbTooltip="Archivo: {{ condicion1.aspecto1File }}"
+                        >
+                          <i class="far fa-eye"></i> Descargar
+                        </a>
                         <br />
                         <br />
                         <hr />

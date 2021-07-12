@@ -20,12 +20,15 @@ export interface Condicion1 {
     urlCostoPrograma: string;
     normaPrograma: string;
     urlNormaPrograma: string;
-    regsitroPrograma: string;
-    urlRegsitroPrograma: string;
+    registroPrograma: string;
+    urlRegistroPrograma: string;
     aspecto1Programa: string;
     aspecto1File: string;
     aspecto2Programa: string;
+    aspecto2File: string;
     aspecto3Programa: string;
+    aspecto3File: string;
     aspecto4Programa: string;
+    aspecto4File: string;
     key$?: string;
 }
