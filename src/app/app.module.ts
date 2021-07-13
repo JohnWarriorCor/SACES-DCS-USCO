@@ -89,6 +89,14 @@ import { Condicion6Component } from './components/pages/condicion6/condicion6.co
 import { Condicion7Component } from './components/pages/condicion7/condicion7.component';
 import { Condicion8Component } from './components/pages/condicion8/condicion8.component';
 import { Condicion9Component } from './components/pages/condicion9/condicion9.component';
+import { Condicion2editComponent } from './components/admin/condicion2edit/condicion2edit.component';
+import { Condicion3editComponent } from './components/admin/condicion3edit/condicion3edit.component';
+import { Condicion4editComponent } from './components/admin/condicion4edit/condicion4edit.component';
+import { Condicion5editComponent } from './components/admin/condicion5edit/condicion5edit.component';
+import { Condicion6editComponent } from './components/admin/condicion6edit/condicion6edit.component';
+import { Condicion7editComponent } from './components/admin/condicion7edit/condicion7edit.component';
+import { Condicion8editComponent } from './components/admin/condicion8edit/condicion8edit.component';
+import { Condicion9editComponent } from './components/admin/condicion9edit/condicion9edit.component';
 
 // registrar los locales con el nombre que quieras utilizar a la hora de proveer
 registerLocaleData(localeEsCO, 'es-CO');
@@ -154,6 +162,14 @@ registerLocaleData(localeEsCO, 'es-CO');
     Condicion7Component,
     Condicion8Component,
     Condicion9Component,
+    Condicion2editComponent,
+    Condicion3editComponent,
+    Condicion4editComponent,
+    Condicion5editComponent,
+    Condicion6editComponent,
+    Condicion7editComponent,
+    Condicion8editComponent,
+    Condicion9editComponent,
   ],
   imports: [
     BrowserModule,

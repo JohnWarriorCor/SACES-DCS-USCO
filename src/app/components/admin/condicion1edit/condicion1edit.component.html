@@ -893,18 +893,18 @@
                               Soporte (pdf o word):
                             </h6>
                             <form
-                              [formGroup]="archivoForm5"
-                              (ngSubmit)="subirArchivoAspecto2()"
+                              [formGroup]="archivoForm6"
+                              (ngSubmit)="subirArchivoAspecto3()"
                             >
                               <div class="row">
                                 <div
-                                  *ngIf="porcentaje5 > 1 && porcentaje5 < 101"
+                                  *ngIf="porcentaje6 > 1 && porcentaje6 < 101"
                                   class="col"
                                 >
                                   <ngb-progressbar
                                     [showValue]="true"
                                     type="danger"
-                                    [value]="porcentaje5"
+                                    [value]="porcentaje6"
                                   >
                                   </ngb-progressbar
                                   ><br />
@@ -916,8 +916,8 @@
                                     <input
                                       type="file"
                                       class="custom-file-input"
-                                      formControlName="archivo5"
-                                      (change)="cambioArchivoAspecto2($event)"
+                                      formControlName="archivo6"
+                                      (change)="cambioArchivoAspecto3($event)"
                                       id="customFileLang"
                                       lang="es"
                                       required
@@ -932,7 +932,7 @@
                                         style="margin-left: 16px"
                                         for="customFileLang"
                                       >
-                                        {{ mensajeArchivo5 | slice: 0:50 }}
+                                        {{ mensajeArchivo6 | slice: 0:60 }}
                                       </span>
                                     </span>
                                   </label>
@@ -946,20 +946,20 @@
                                         type="submit"
                                         placement="top"
                                         ngbTooltip="Subir archivo"
-                                        [disabled]="!archivoForm5.valid"
+                                        [disabled]="!archivoForm6.valid"
                                       >
                                         <i class="fas fa-upload"></i> Cargar
                                       </button>
                                     </div>
                                     <div class="col">
                                       <a
-                                        [href]="condicion1.aspecto2File"
+                                        [href]="condicion1.aspecto3File"
                                         target="_blank"
-                                        *ngIf="condicion1.aspecto2File"
+                                        *ngIf="condicion1.aspecto3File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Archivo: {{
-                                          condicion1.aspecto2File
+                                          condicion1.aspecto3File
                                         }}"
                                       >
                                         <i class="far fa-eye"></i> Visualizar
@@ -979,7 +979,7 @@
                               <div class="row">
                                 <div class="col">
                                   <div
-                                    *ngIf="porcentaje5 === 100"
+                                    *ngIf="porcentaje6 === 100"
                                     class="alert alert-success"
                                     role="alert"
                                   >
@@ -1012,18 +1012,18 @@
                               Soporte (pdf o word):
                             </h6>
                             <form
-                              [formGroup]="archivoForm5"
-                              (ngSubmit)="subirArchivoAspecto2()"
+                              [formGroup]="archivoForm7"
+                              (ngSubmit)="subirArchivoAspecto4()"
                             >
                               <div class="row">
                                 <div
-                                  *ngIf="porcentaje5 > 1 && porcentaje5 < 101"
+                                  *ngIf="porcentaje7 > 1 && porcentaje7 < 101"
                                   class="col"
                                 >
                                   <ngb-progressbar
                                     [showValue]="true"
                                     type="danger"
-                                    [value]="porcentaje5"
+                                    [value]="porcentaje7"
                                   >
                                   </ngb-progressbar
                                   ><br />
@@ -1035,8 +1035,8 @@
                                     <input
                                       type="file"
                                       class="custom-file-input"
-                                      formControlName="archivo5"
-                                      (change)="cambioArchivoAspecto2($event)"
+                                      formControlName="archivo7"
+                                      (change)="cambioArchivoAspecto4($event)"
                                       id="customFileLang"
                                       lang="es"
                                       required
@@ -1048,10 +1048,10 @@
                                           text-left
                                           inputPaciente
                                         "
-                                        style="margin-left: 16px"
+                                        style="margin-left: 17px"
                                         for="customFileLang"
                                       >
-                                        {{ mensajeArchivo5 | slice: 0:50 }}
+                                        {{ mensajeArchivo7 | slice: 0:50 }}
                                       </span>
                                     </span>
                                   </label>
@@ -1065,26 +1065,26 @@
                                         type="submit"
                                         placement="top"
                                         ngbTooltip="Subir archivo"
-                                        [disabled]="!archivoForm5.valid"
+                                        [disabled]="!archivoForm7.valid"
                                       >
                                         <i class="fas fa-upload"></i> Cargar
                                       </button>
                                     </div>
                                     <div class="col">
                                       <a
-                                        [href]="condicion1.aspecto2File"
+                                        [href]="condicion1.aspecto4File"
                                         target="_blank"
-                                        *ngIf="condicion1.aspecto2File"
+                                        *ngIf="condicion1.aspecto4File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Archivo: {{
-                                          condicion1.aspecto2File
+                                          condicion1.aspecto4File
                                         }}"
                                       >
                                         <i class="far fa-eye"></i> Visualizar
                                       </a>
                                       <button
-                                        *ngIf="!condicion1.aspecto2File"
+                                        *ngIf="!condicion1.aspecto4File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Por favor cargue un archivo para esta entrada"
@@ -1098,7 +1098,7 @@
                               <div class="row">
                                 <div class="col">
                                   <div
-                                    *ngIf="porcentaje5 === 100"
+                                    *ngIf="porcentaje7 === 100"
                                     class="alert alert-success"
                                     role="alert"
                                   >

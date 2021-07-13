@@ -169,12 +169,12 @@
                           {{ item.aspecto1Programa }}
                         </p>
                         <a
-                          [href]="condicion1.aspecto2File"
+                          [href]="item.aspecto1File"
                           target="_blank"
-                          *ngIf="condicion1.aspecto2File"
+                          *ngIf="item.aspecto1File"
                           class="btn navlinkin"
                           placement="top"
-                          ngbTooltip="Archivo: {{ condicion1.aspecto1File }}"
+                          ngbTooltip="Archivo: {{ item.aspecto1File }}"
                         >
                           <i class="far fa-eye"></i> Descargar
                         </a>

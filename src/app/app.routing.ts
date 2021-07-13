@@ -51,6 +51,14 @@ import { Condicion6Component } from './components/pages/condicion6/condicion6.co
 import { Condicion7Component } from './components/pages/condicion7/condicion7.component';
 import { Condicion8Component } from './components/pages/condicion8/condicion8.component';
 import { Condicion9Component } from './components/pages/condicion9/condicion9.component';
+import { Condicion2editComponent } from './components/admin/condicion2edit/condicion2edit.component';
+import { Condicion3editComponent } from './components/admin/condicion3edit/condicion3edit.component';
+import { Condicion4editComponent } from './components/admin/condicion4edit/condicion4edit.component';
+import { Condicion5editComponent } from './components/admin/condicion5edit/condicion5edit.component';
+import { Condicion6editComponent } from './components/admin/condicion6edit/condicion6edit.component';
+import { Condicion7editComponent } from './components/admin/condicion7edit/condicion7edit.component';
+import { Condicion8editComponent } from './components/admin/condicion8edit/condicion8edit.component';
+import { Condicion9editComponent } from './components/admin/condicion9edit/condicion9edit.component';
 
 const routes: Routes = [
   // INICIO
@@ -114,6 +122,22 @@ const routes: Routes = [
   { path: 'admi-login', component: LoginComponent },
   // CONDICION 1
   { path: 'admi_condicion1/:id', component: Condicion1editComponent, canActivate: [AuthGuard] },
+  // CONDICION 2
+  { path: 'admi_condicion2/:id', component: Condicion2editComponent, canActivate: [AuthGuard] },
+  // CONDICION 3
+  { path: 'admi_condicion3/:id', component: Condicion3editComponent, canActivate: [AuthGuard] },
+  // CONDICION 4
+  { path: 'admi_condicion4/:id', component: Condicion4editComponent, canActivate: [AuthGuard] },
+  // CONDICION 5
+  { path: 'admi_condicion5/:id', component: Condicion5editComponent, canActivate: [AuthGuard] },
+  // CONDICION 6
+  { path: 'admi_condicion6/:id', component: Condicion6editComponent, canActivate: [AuthGuard] },
+  // CONDICION 7
+  { path: 'admi_condicion7/:id', component: Condicion7editComponent, canActivate: [AuthGuard] },
+  // CONDICION 8
+  { path: 'admi_condicion8/:id', component: Condicion8editComponent, canActivate: [AuthGuard] },
+  // CONDICION 9
+  { path: 'admi_condicion9/:id', component: Condicion9editComponent, canActivate: [AuthGuard] },
   // INICIO
   { path: 'admi_denominacion/:id', component: DenominacionComponent, canActivate: [AuthGuard] },
   { path: 'admi_carrusel', component: CarruselComponent, canActivate: [AuthGuard] },

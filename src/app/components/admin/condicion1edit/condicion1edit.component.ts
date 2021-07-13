@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
-import {
-  FormGroup,
-  NgForm,
-  FormControl,
-  Validators,
-} from '@angular/forms';
+import { FormGroup, NgForm, FormControl, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireAuth } from '@angular/fire/auth';
 import 'firebase/auth';
@@ -294,7 +289,11 @@ export class Condicion1editComponent implements OnInit {
         this.mensajeArchivo1 = `${event.target.files[i].name}`;
         this.nombreArchivo1 = event.target.files[i].name;
         this.datosFormulario1.delete('archivo1');
-        this.datosFormulario1.append('archivo1', event.target.files[i], event.target.files[i].name);
+        this.datosFormulario1.append(
+          'archivo1',
+          event.target.files[i],
+          event.target.files[i].name
+        );
       }
     } else {
       this.mensajeArchivo1 = 'No hay un archivo';
@@ -525,6 +524,106 @@ export class Condicion1editComponent implements OnInit {
               this.URLPublica5,
               this.finalizado5,
               this.condicion1.aspecto2File,
+            ];
+          });
+        }, 2000);
+      }
+    });
+  }
+  // ASPECTO 3
+  // Evento que se gatilla cuando el input de tipo archivo cambia
+  public cambioArchivoAspecto3(event) {
+    if (event.target.files.length > 0) {
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < event.target.files.length; i++) {
+        this.mensajeArchivo6 = `Archivo: ${event.target.files[i].name}`;
+        this.nombreArchivo6 = event.target.files[i].name;
+        this.datosFormulario6.delete('archivo6');
+        this.datosFormulario6.append(
+          'archivo6',
+          event.target.files[i],
+          event.target.files[i].name
+        );
+      }
+    } else {
+      this.mensajeArchivo6 = 'No hay un archivo seleccionado';
+    }
+  }
+  // Sube el archivo a Cloud Storage URL NORMA PROGRAMA
+  subirArchivoAspecto3() {
+    this.condicion1.aspecto3File = this.nombreArchivo6;
+    this.nombreArchivo6 = 'CONDICION1/SOPORTES/ASPECTO3/' + this.nombreArchivo6;
+    const archivo6 = this.datosFormulario6.get('archivo6');
+    const referencia6 = this.firebaseStorage.referenciaCloudStorage(
+      this.nombreArchivo6
+    );
+    const cargar6 = this.firebaseStorage.cargarCloudStorage(
+      this.nombreArchivo6,
+      archivo6
+    );
+    // Cambia el porcentaje
+    cargar6.percentageChanges().subscribe((porcentaje6) => {
+      this.porcentaje6 = Math.round(porcentaje6);
+      if (this.porcentaje6 === 100) {
+        setTimeout(() => {
+          referencia6.getDownloadURL().subscribe((URL) => {
+            this.URLPublica6 = URL;
+            this.finalizado6 = true;
+            this.condicion1.aspecto3File = this.URLPublica6;
+            return [
+              this.URLPublica6,
+              this.finalizado6,
+              this.condicion1.aspecto3File,
+            ];
+          });
+        }, 2000);
+      }
+    });
+  }
+  // ASPECTO 4
+  // Evento que se gatilla cuando el input de tipo archivo cambia
+  public cambioArchivoAspecto4(event) {
+    if (event.target.files.length > 0) {
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < event.target.files.length; i++) {
+        this.mensajeArchivo7 = `Archivo: ${event.target.files[i].name}`;
+        this.nombreArchivo7 = event.target.files[i].name;
+        this.datosFormulario7.delete('archivo7');
+        this.datosFormulario7.append(
+          'archivo7',
+          event.target.files[i],
+          event.target.files[i].name
+        );
+      }
+    } else {
+      this.mensajeArchivo7 = 'No hay un archivo seleccionado';
+    }
+  }
+  // Sube el archivo a Cloud Storage URL NORMA PROGRAMA
+  subirArchivoAspecto4() {
+    this.condicion1.aspecto4File = this.nombreArchivo7;
+    this.nombreArchivo7 = 'CONDICION1/SOPORTES/ASPECTO4/' + this.nombreArchivo7;
+    const archivo7 = this.datosFormulario7.get('archivo7');
+    const referencia7 = this.firebaseStorage.referenciaCloudStorage(
+      this.nombreArchivo7
+    );
+    const cargar7 = this.firebaseStorage.cargarCloudStorage(
+      this.nombreArchivo7,
+      archivo7
+    );
+    // Cambia el porcentaje
+    cargar7.percentageChanges().subscribe((porcentaje7) => {
+      this.porcentaje7 = Math.round(porcentaje7);
+      if (this.porcentaje7 === 100) {
+        setTimeout(() => {
+          referencia7.getDownloadURL().subscribe((URL) => {
+            this.URLPublica7 = URL;
+            this.finalizado7 = true;
+            this.condicion1.aspecto4File = this.URLPublica7;
+            return [
+              this.URLPublica7,
+              this.finalizado7,
+              this.condicion1.aspecto4File,
             ];
           });
         }, 2000);
