@@ -1,3 +1,498 @@
-<p>
-  condicion4edit works!
-</p>
+<div class="wrapper fadeIn fast">
+  <div>
+    <div class="container" style="padding-top: 30px; padding-bottom: 30px">
+      <div class="row">
+        <div class="col-sm shadow text-justify fondodivleft shadow grayinst">
+          <h3 class="titleInstRed">Formulario Condición 4</h3>
+          <hr class="lineInstRed" />
+          <br />
+          <form #forma="ngForm" class="text-center">
+            <div class="row animated fadeIn fast"></div>
+            <div class="row animated fadeIn fast">
+              <div class="col">
+                <hr />
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div
+                      class="card-header"
+                      id="headingOne"
+                      style="background-color: #8f141b"
+                    >
+                      <div class="row">
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                        <div class="col">
+                          <h2 class="mb-0">
+                            <button
+                              id="bt"
+                              class="
+                                btn btn-link
+                                navlinkin
+                                font-weight-bold
+                                text-uppercase
+                              "
+                              type="button"
+                            >
+                              Aspectos
+                            </button>
+                          </h2>
+                        </div>
+                        <div
+                          class="col"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          1). Escenarios que coloca la Institución a disposición
+                          del programa para lograr un desarrollo adecuado de los
+                          tiempos de trabajo propuestos.
+                        </h6>
+                        <br />
+                        <textarea
+                          id="pregunta11"
+                          name="aspecto1Programa"
+                          [(ngModel)]="condicion4.aspecto1Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <h6 class="text-left subTituloRojoInstitucional">
+                              Soporte (pdf o word):
+                            </h6>
+                            <form
+                              [formGroup]="archivoForm1"
+                              (ngSubmit)="subirArchivoAspecto1()"
+                            >
+                              <div class="row">
+                                <div
+                                  *ngIf="porcentaje1 > 1 && porcentaje1 < 101"
+                                  class="col"
+                                >
+                                  <ngb-progressbar
+                                    [showValue]="true"
+                                    type="danger"
+                                    [value]="porcentaje1"
+                                  >
+                                  </ngb-progressbar
+                                  ><br />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label class="file-label">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      formControlName="archivo1"
+                                      (change)="cambioArchivoAspecto1($event)"
+                                      id="customFileLang"
+                                      lang="es"
+                                      required
+                                    />
+                                    <span class="file-cta">
+                                      <span
+                                        class="
+                                          custom-file-label
+                                          text-left
+                                          inputPaciente
+                                        "
+                                        style="margin-left: 16px"
+                                        for="customFileLang"
+                                      >
+                                        {{ mensajeArchivo1 | slice: 0:50 }}
+                                      </span>
+                                    </span>
+                                  </label>
+                                  <br />
+                                </div>
+                                <div class="col">
+                                  <div class="row">
+                                    <div class="col">
+                                      <button
+                                        class="btn navlinkin"
+                                        type="submit"
+                                        placement="top"
+                                        ngbTooltip="Subir archivo"
+                                        [disabled]="!archivoForm1.valid"
+                                      >
+                                        <i class="fas fa-upload"></i> Cargar
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <a
+                                        [href]="condicion4.aspecto1File"
+                                        target="_blank"
+                                        *ngIf="condicion4.aspecto1File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Archivo: {{
+                                          condicion4.aspecto1File
+                                        }}"
+                                      >
+                                        <i class="far fa-eye"></i> Visualizar
+                                      </a>
+                                      <button
+                                        *ngIf="!condicion4.aspecto1File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Por favor cargue un archivo para esta entrada"
+                                      >
+                                        <i class="far fa-eye"></i> Vacío
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <div
+                                    *ngIf="porcentaje1 === 100"
+                                    class="alert alert-success"
+                                    role="alert"
+                                  >
+                                    Archivo cargado exitosamente
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          2). Estrategias o acciones que la institución prevén
+                          para el acompañamiento docente al trabajo de los
+                          Estudiantes.
+                        </h6>
+                        <br />
+                        <textarea
+                          [(ngModel)]="condicion4.aspecto2Programa"
+                          name="aspecto2Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <h6 class="text-left subTituloRojoInstitucional">
+                              Soporte (pdf o word):
+                            </h6>
+                            <form
+                              [formGroup]="archivoForm2"
+                              (ngSubmit)="subirArchivoAspecto2()"
+                            >
+                              <div class="row">
+                                <div
+                                  *ngIf="porcentaje2 > 1 && porcentaje2 < 101"
+                                  class="col"
+                                >
+                                  <ngb-progressbar
+                                    [showValue]="true"
+                                    type="danger"
+                                    [value]="porcentaje2"
+                                  >
+                                  </ngb-progressbar
+                                  ><br />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label class="file-label">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      formControlName="archivo2"
+                                      (change)="cambioArchivoAspecto2($event)"
+                                      id="customFileLang"
+                                      lang="es"
+                                      required
+                                    />
+                                    <span class="file-cta">
+                                      <span
+                                        class="
+                                          custom-file-label
+                                          text-left
+                                          inputPaciente
+                                        "
+                                        style="margin-left: 16px"
+                                        for="customFileLang"
+                                      >
+                                        {{ mensajeArchivo2 | slice: 0:20 }}
+                                      </span>
+                                    </span>
+                                  </label>
+                                  <br />
+                                </div>
+                                <div class="col">
+                                  <div class="row">
+                                    <div class="col">
+                                      <button
+                                        class="btn navlinkin"
+                                        type="submit"
+                                        placement="top"
+                                        ngbTooltip="Subir archivo"
+                                        [disabled]="!archivoForm2.valid"
+                                      >
+                                        <i class="fas fa-upload"></i> Cargar
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <a
+                                        [href]="condicion4.aspecto2File"
+                                        target="_blank"
+                                        *ngIf="condicion4.aspecto2File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Archivo: {{
+                                          condicion4.aspecto2File
+                                        }}"
+                                      >
+                                        <i class="far fa-eye"></i> Visualizar
+                                      </a>
+                                      <button
+                                        *ngIf="!condicion4.aspecto2File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Por favor cargue un archivo para esta entrada"
+                                      >
+                                        <i class="far fa-eye"></i> Vacío
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <div
+                                    *ngIf="porcentaje2 === 100"
+                                    class="alert alert-success"
+                                    role="alert"
+                                  >
+                                    Archivo cargado exitosamente
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <h6 class="text-left subTituloRojoInstitucional">
+                          3). Escenarios para los encuentros entre Tutor y
+                          Estudiante de tal forma que se garantice el desarrollo
+                          de las actividades propuestas en cada componente del
+                          plan de estudios.
+                        </h6>
+                        <br />
+                        <textarea
+                          name="aspecto3Programa"
+                          [(ngModel)]="condicion4.aspecto3Programa"
+                          class="form-control shadow p-3"
+                          placeholder="..."
+                          rows="3"
+                        ></textarea>
+                        <br />
+                        <div class="row">
+                          <div class="col">
+                            <h6 class="text-left subTituloRojoInstitucional">
+                              Soporte (pdf o word):
+                            </h6>
+                            <form
+                              [formGroup]="archivoForm3"
+                              (ngSubmit)="subirArchivoAspecto3()"
+                            >
+                              <div class="row">
+                                <div
+                                  *ngIf="porcentaje3 > 1 && porcentaje3 < 101"
+                                  class="col"
+                                >
+                                  <ngb-progressbar
+                                    [showValue]="true"
+                                    type="danger"
+                                    [value]="porcentaje3"
+                                  >
+                                  </ngb-progressbar
+                                  ><br />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <label class="file-label">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      formControlName="archivo3"
+                                      (change)="cambioArchivoAspecto3($event)"
+                                      id="customFileLang"
+                                      lang="es"
+                                      required
+                                    />
+                                    <span class="file-cta">
+                                      <span
+                                        class="
+                                          custom-file-label
+                                          text-left
+                                          inputPaciente
+                                        "
+                                        style="margin-left: 13px"
+                                        for="customFileLang"
+                                      >
+                                        {{ mensajeArchivo3 | slice: 0:30 }}
+                                      </span>
+                                    </span>
+                                  </label>
+                                  <br />
+                                </div>
+                                <div class="col">
+                                  <div class="row">
+                                    <div class="col">
+                                      <button
+                                        class="btn navlinkin"
+                                        type="submit"
+                                        placement="top"
+                                        ngbTooltip="Subir archivo"
+                                        [disabled]="!archivoForm3.valid"
+                                      >
+                                        <i class="fas fa-upload"></i> Cargar
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <a
+                                        [href]="condicion4.aspecto3File"
+                                        target="_blank"
+                                        *ngIf="condicion4.aspecto3File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Archivo: {{
+                                          condicion4.aspecto3File
+                                        }}"
+                                      >
+                                        <i class="far fa-eye"></i> Visualizar
+                                      </a>
+                                      <button
+                                        *ngIf="!condicion4.aspecto2File"
+                                        class="btn navlinkin"
+                                        placement="top"
+                                        ngbTooltip="Por favor cargue un archivo para esta entrada"
+                                      >
+                                        <i class="far fa-eye"></i> Vacío
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <div
+                                    *ngIf="porcentaje3 === 100"
+                                    class="alert alert-success"
+                                    role="alert"
+                                  >
+                                    Archivo cargado exitosamente
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
+          </form>
+          <form #forma="ngForm">
+            <button
+              (click)="openModal(confirmar)"
+              class="btn navlinkinSolid m-2"
+            >
+              <i class="far fa-save"></i> Guardar
+            </button>
+            <a
+              href="https://console.firebase.google.com/u/4/project/saces-dcs-usco/storage/saces-dcs-usco.appspot.com/files"
+              target="_blank"
+              ><button class="btn navlinkinSolid m-2">
+                <i class="fas fa-upload"></i> Cargar imagen
+              </button></a
+            >
+            <a [routerLink]="['/home']"
+              ><button class="btn navlinkinSolid m-2">
+                <i class="fas fa-sign-out-alt"></i> Regresar
+              </button></a
+            >
+            <ng-template #confirmar let-modal>
+              <div class="modal-header bgrojoycafe">
+                <h4 class="modal-title">Confirmar acción</h4>
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <i class="fas fa-times" style="color: white"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div
+                  class="alert alert-warning text-center font-weight-bold"
+                  role="alert"
+                >
+                  Está a punto de guardar el evento. <br />
+                  ¿Desea continuar con la acción?
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btnColorFacultadSalud"
+                  ngbAutofocus
+                  (click)="guardar()"
+                >
+                  Aceptar
+                </button>
+                <button
+                  type="button"
+                  class="btn navlinkinSolid"
+                  (click)="modal.close('Close click')"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </ng-template>
+            <br />
+            <div
+              *ngIf="error != false"
+              class="alert alert-danger alert-dismissible fade show"
+              role="alert"
+            >
+              <strong>{{ passError }}</strong>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
