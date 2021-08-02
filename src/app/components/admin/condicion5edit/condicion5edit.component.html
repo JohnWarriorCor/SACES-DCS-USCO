@@ -59,11 +59,11 @@
                     >
                       <div class="card-body">
                         <h6 class="text-left subTituloRojoInstitucional">
-                          1). Objetivos, estrategias, actividades, metas, recursos
-                          y responsables que propone la Institución en el Plan
-                          para el desarrollo de la Investigación en el Programa,
-                          con el nivel de formación del Programa y las capacidades
-                          institucionales.
+                          1). Objetivos, estrategias, actividades, metas,
+                          recursos y responsables que propone la Institución en
+                          el Plan para el desarrollo de la Investigación en el
+                          Programa, con el nivel de formación del Programa y las
+                          capacidades institucionales.
                         </h6>
                         <br />
                         <textarea
@@ -181,9 +181,9 @@
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
-                          2). Estrategias y actividades académicas que promueve la
-                          participación de estudiantes y profesores del Programa
-                          en Investigación.
+                          2). Estrategias y actividades académicas que promueve
+                          la participación de estudiantes y profesores del
+                          Programa en Investigación.
                         </h6>
                         <br />
                         <textarea
@@ -300,10 +300,10 @@
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
-                          3). Actividades, proyectos y productos, afines al campo
-                          de conocimiento del Programa, los cuales comprueban la
-                          participación de estudiantes y profesores del Programa
-                          con la investigación.
+                          3). Actividades, proyectos y productos, afines al
+                          campo de conocimiento del Programa, los cuales
+                          comprueban la participación de estudiantes y
+                          profesores del Programa con la investigación.
                         </h6>
                         <br />
                         <textarea
@@ -420,14 +420,15 @@
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
-                          4). Sustentación de la Institución con la disponibilidad
-                          e idoneidad de profesores orientados al fomento de la
-                          Investigación en áreas afines a la naturaleza del
-                          Programa.
+                          4). Sustentación de la Institución con la
+                          disponibilidad e idoneidad de profesores orientados al
+                          fomento de la Investigación en áreas afines a la
+                          naturaleza del Programa.
                         </h6>
                         <br />
                         <textarea
-                          name="aspecto3Programa"
+                          id="pregunta44"
+                          name="aspecto4Programa"
                           [(ngModel)]="condicion5.aspecto4Programa"
                           class="form-control shadow p-3"
                           placeholder="..."
@@ -440,18 +441,18 @@
                               Soporte (pdf o word):
                             </h6>
                             <form
-                              [formGroup]="archivoForm3"
-                              (ngSubmit)="subirArchivoAspecto3()"
+                              [formGroup]="archivoForm4"
+                              (ngSubmit)="subirArchivoAspecto4()"
                             >
                               <div class="row">
                                 <div
-                                  *ngIf="porcentaje3 > 1 && porcentaje3 < 101"
+                                  *ngIf="porcentaje4 > 1 && porcentaje4 < 101"
                                   class="col"
                                 >
                                   <ngb-progressbar
                                     [showValue]="true"
                                     type="danger"
-                                    [value]="porcentaje3"
+                                    [value]="porcentaje4"
                                   >
                                   </ngb-progressbar
                                   ><br />
@@ -463,8 +464,8 @@
                                     <input
                                       type="file"
                                       class="custom-file-input"
-                                      formControlName="archivo3"
-                                      (change)="cambioArchivoAspecto3($event)"
+                                      formControlName="archivo4"
+                                      (change)="cambioArchivoAspecto4($event)"
                                       id="customFileLang"
                                       lang="es"
                                       required
@@ -476,10 +477,10 @@
                                           text-left
                                           inputPaciente
                                         "
-                                        style="margin-left: 13px"
+                                        style="margin-left: 16px"
                                         for="customFileLang"
                                       >
-                                        {{ mensajeArchivo3 | slice: 0:30 }}
+                                        {{ mensajeArchivo4 | slice: 0:50 }}
                                       </span>
                                     </span>
                                   </label>
@@ -493,26 +494,26 @@
                                         type="submit"
                                         placement="top"
                                         ngbTooltip="Subir archivo"
-                                        [disabled]="!archivoForm3.valid"
+                                        [disabled]="!archivoForm4.valid"
                                       >
                                         <i class="fas fa-upload"></i> Cargar
                                       </button>
                                     </div>
                                     <div class="col">
                                       <a
-                                        [href]="condicion5.aspecto3File"
+                                        [href]="condicion5.aspecto4File"
                                         target="_blank"
-                                        *ngIf="condicion5.aspecto3File"
+                                        *ngIf="condicion5.aspecto4File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Archivo: {{
-                                          condicion5.aspecto3File
+                                          condicion5.aspecto4File
                                         }}"
                                       >
                                         <i class="far fa-eye"></i> Visualizar
                                       </a>
                                       <button
-                                        *ngIf="!condicion5.aspecto2File"
+                                        *ngIf="!condicion5.aspecto4File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Por favor cargue un archivo para esta entrada"
@@ -526,7 +527,7 @@
                               <div class="row">
                                 <div class="col">
                                   <div
-                                    *ngIf="porcentaje3 === 100"
+                                    *ngIf="porcentaje4 === 100"
                                     class="alert alert-success"
                                     role="alert"
                                   >
@@ -541,12 +542,14 @@
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
                           5). Estrategias de la función de investigación que
-                          acompañan el desarrollo académico propio de este nivel.
+                          acompañan el desarrollo académico propio de este
+                          nivel.
                         </h6>
                         <br />
                         <textarea
-                          name="aspecto3Programa"
-                          [(ngModel)]="condicion5.aspecto3Programa"
+                          id="pregunta55"
+                          name="aspecto5Programa"
+                          [(ngModel)]="condicion5.aspecto5Programa"
                           class="form-control shadow p-3"
                           placeholder="..."
                           rows="3"
@@ -558,18 +561,18 @@
                               Soporte (pdf o word):
                             </h6>
                             <form
-                              [formGroup]="archivoForm3"
-                              (ngSubmit)="subirArchivoAspecto3()"
+                              [formGroup]="archivoForm5"
+                              (ngSubmit)="subirArchivoAspecto5()"
                             >
                               <div class="row">
                                 <div
-                                  *ngIf="porcentaje3 > 1 && porcentaje3 < 101"
+                                  *ngIf="porcentaje5 > 1 && porcentaje5 < 101"
                                   class="col"
                                 >
                                   <ngb-progressbar
                                     [showValue]="true"
                                     type="danger"
-                                    [value]="porcentaje3"
+                                    [value]="porcentaje5"
                                   >
                                   </ngb-progressbar
                                   ><br />
@@ -581,8 +584,8 @@
                                     <input
                                       type="file"
                                       class="custom-file-input"
-                                      formControlName="archivo3"
-                                      (change)="cambioArchivoAspecto3($event)"
+                                      formControlName="archivo5"
+                                      (change)="cambioArchivoAspecto5($event)"
                                       id="customFileLang"
                                       lang="es"
                                       required
@@ -594,10 +597,10 @@
                                           text-left
                                           inputPaciente
                                         "
-                                        style="margin-left: 13px"
+                                        style="margin-left: 56px"
                                         for="customFileLang"
                                       >
-                                        {{ mensajeArchivo3 | slice: 0:30 }}
+                                        {{ mensajeArchivo5 | slice: 0:50 }}
                                       </span>
                                     </span>
                                   </label>
@@ -611,26 +614,26 @@
                                         type="submit"
                                         placement="top"
                                         ngbTooltip="Subir archivo"
-                                        [disabled]="!archivoForm3.valid"
+                                        [disabled]="!archivoForm5.valid"
                                       >
                                         <i class="fas fa-upload"></i> Cargar
                                       </button>
                                     </div>
                                     <div class="col">
                                       <a
-                                        [href]="condicion5.aspecto3File"
+                                        [href]="condicion5.aspecto5File"
                                         target="_blank"
-                                        *ngIf="condicion5.aspecto3File"
+                                        *ngIf="condicion5.aspecto5File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Archivo: {{
-                                          condicion5.aspecto3File
+                                          condicion5.aspecto5File
                                         }}"
                                       >
                                         <i class="far fa-eye"></i> Visualizar
                                       </a>
                                       <button
-                                        *ngIf="!condicion5.aspecto2File"
+                                        *ngIf="!condicion5.aspecto5File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Por favor cargue un archivo para esta entrada"
@@ -644,7 +647,7 @@
                               <div class="row">
                                 <div class="col">
                                   <div
-                                    *ngIf="porcentaje3 === 100"
+                                    *ngIf="porcentaje5 === 100"
                                     class="alert alert-success"
                                     role="alert"
                                   >
@@ -658,17 +661,18 @@
                         <br />
                         <hr />
                         <h6 class="text-left subTituloRojoInstitucional">
-                          6). Explicación de la Institución para la articulación y
-                          correspondencia entre las capacidades y fortalezas que
-                          tienen los Grupos de Investigación que apoyan al
-                          Programa y los Profesores asociados al programa, con el
-                          nivel de formación, el currículo y los años de
+                          6). Explicación de la Institución para la articulación
+                          y correspondencia entre las capacidades y fortalezas
+                          que tienen los Grupos de Investigación que apoyan al
+                          Programa y los Profesores asociados al programa, con
+                          el nivel de formación, el currículo y los años de
                           funcionamiento del Programa.
                         </h6>
                         <br />
                         <textarea
-                          name="aspecto3Programa"
-                          [(ngModel)]="condicion5.aspecto3Programa"
+                          id="pregunta66"
+                          name="aspecto6Programa"
+                          [(ngModel)]="condicion5.aspecto6Programa"
                           class="form-control shadow p-3"
                           placeholder="..."
                           rows="3"
@@ -680,18 +684,18 @@
                               Soporte (pdf o word):
                             </h6>
                             <form
-                              [formGroup]="archivoForm3"
-                              (ngSubmit)="subirArchivoAspecto3()"
+                              [formGroup]="archivoForm6"
+                              (ngSubmit)="subirArchivoAspecto6()"
                             >
                               <div class="row">
                                 <div
-                                  *ngIf="porcentaje3 > 1 && porcentaje3 < 101"
+                                  *ngIf="porcentaje6 > 1 && porcentaje6 < 101"
                                   class="col"
                                 >
                                   <ngb-progressbar
                                     [showValue]="true"
                                     type="danger"
-                                    [value]="porcentaje3"
+                                    [value]="porcentaje6"
                                   >
                                   </ngb-progressbar
                                   ><br />
@@ -703,8 +707,8 @@
                                     <input
                                       type="file"
                                       class="custom-file-input"
-                                      formControlName="archivo3"
-                                      (change)="cambioArchivoAspecto3($event)"
+                                      formControlName="archivo6"
+                                      (change)="cambioArchivoAspecto6($event)"
                                       id="customFileLang"
                                       lang="es"
                                       required
@@ -716,10 +720,10 @@
                                           text-left
                                           inputPaciente
                                         "
-                                        style="margin-left: 13px"
+                                        style="margin-left: 66px"
                                         for="customFileLang"
                                       >
-                                        {{ mensajeArchivo3 | slice: 0:30 }}
+                                        {{ mensajeArchivo6 | slice: 0:50 }}
                                       </span>
                                     </span>
                                   </label>
@@ -733,26 +737,26 @@
                                         type="submit"
                                         placement="top"
                                         ngbTooltip="Subir archivo"
-                                        [disabled]="!archivoForm3.valid"
+                                        [disabled]="!archivoForm6.valid"
                                       >
                                         <i class="fas fa-upload"></i> Cargar
                                       </button>
                                     </div>
                                     <div class="col">
                                       <a
-                                        [href]="condicion5.aspecto3File"
+                                        [href]="condicion5.aspecto6File"
                                         target="_blank"
-                                        *ngIf="condicion5.aspecto3File"
+                                        *ngIf="condicion5.aspecto6File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Archivo: {{
-                                          condicion5.aspecto3File
+                                          condicion5.aspecto6File
                                         }}"
                                       >
                                         <i class="far fa-eye"></i> Visualizar
                                       </a>
                                       <button
-                                        *ngIf="!condicion5.aspecto2File"
+                                        *ngIf="!condicion5.aspecto6File"
                                         class="btn navlinkin"
                                         placement="top"
                                         ngbTooltip="Por favor cargue un archivo para esta entrada"
@@ -766,7 +770,7 @@
                               <div class="row">
                                 <div class="col">
                                   <div
-                                    *ngIf="porcentaje3 === 100"
+                                    *ngIf="porcentaje6 === 100"
                                     class="alert alert-success"
                                     role="alert"
                                   >

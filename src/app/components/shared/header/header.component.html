@@ -61,7 +61,10 @@
   </div>
 </div>
 <header class="header">
-  <nav class="navbar menu navbar-expand-lg menu bgCafeInstitu" *ngIf="auth.user | async">
+  <nav
+    class="navbar menu navbar-expand-lg menu bgCafeInstitu"
+    *ngIf="auth.user | async"
+  >
     <button
       class="navbar-toggler navlinkin"
       type="button"
@@ -126,7 +129,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="['/Justificacion_del_programa']"
+              [routerLink]="['/admi_condicion2/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -144,7 +147,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="['/Aspectos_curriculares']"
+              [routerLink]="['/admi_condicion3/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -164,9 +167,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="[
-                '/Organizacion_de_las_actividades_academicas_y_proceso_formativo'
-              ]"
+              [routerLink]="['/admi_condicion4/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -186,9 +187,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="[
-                '/Investigacion_innovacion_y_creación_artistica_y_cultural'
-              ]"
+              [routerLink]="['/admi_condicion5/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -206,7 +205,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="['/Relacion_con_el_sector_externo']"
+              [routerLink]="['/admi_condicion6/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -222,7 +221,9 @@
             >Condición 7</a
           >
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
-            <a class="menu__link_dropdown" [routerLink]="['/Profesores']"
+            <a
+              class="menu__link_dropdown"
+              [routerLink]="['/admi_condicion7/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -238,7 +239,9 @@
             Condición 8
           </a>
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
-            <a class="menu__link_dropdown" [routerLink]="['/Medios_educativos']"
+            <a
+              class="menu__link_dropdown"
+              [routerLink]="['/admi_condicion8/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
@@ -256,7 +259,7 @@
           <div class="dropdown-content text-left" *ngIf="auth.user | async">
             <a
               class="menu__link_dropdown"
-              [routerLink]="['/Infraestructura_fisica_y_tecnologica']"
+              [routerLink]="['//admi_condicion9/nuevo']"
               ><i class="fas fa-user-cog"></i> Administrar</a
             >
           </div>
